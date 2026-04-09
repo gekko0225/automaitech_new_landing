@@ -1,5 +1,8 @@
 ---
 import '../styles/global.css';
+---
+import Analytics from '@vercel/analytics/astro';
+---
 
 interface Props {
   title?: string;
@@ -43,5 +46,6 @@ const image = `${siteUrl}/og-image.jpg`;
 
   <body>
     <slot />
+    <Analytics />
   </body>
 </html>

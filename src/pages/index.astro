@@ -1,241 +1,82 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-
-const professions = [
-  'Abogados',
-  'Médicos',
-  'Esteticistas',
-  'Organizadores de eventos',
-  'Consultores',
-  'Coaches',
-  'Negocios de servicios',
-  'Emprendedores individuales'
-];
 ---
 
-<BaseLayout
-  title="Ahorra tiempo en tu negocio | Automaitech"
-  description="Implemento soluciones inteligentes para pymes y profesionales que quieren ahorrar tiempo, reducir tareas repetitivas y trabajar con más orden."
->
-  <main>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Start Simple Online</title>
 
-    <!-- HEADER -->
-    <header class="site-header">
-      <div class="container narrow">
-        <a href="/" class="logo">Automaitech</a>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #0f172a, #020617);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 600px;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 36px;
+        line-height: 1.3;
+      }
+
+      p {
+        font-size: 18px;
+        color: #cbd5f5;
+        margin-top: 20px;
+      }
+
+      .btn {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 16px 28px;
+        background: #facc15;
+        color: black;
+        font-weight: bold;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .note {
+        margin-top: 15px;
+        font-size: 14px;
+        color: #94a3b8;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <h1>
+        Confused About Making Money Online?<br>
+        Start Simple
+      </h1>
+
+      <p>
+        Get a free beginner-friendly guide that shows you a clear and simple path 
+        to understanding how to start online without confusion or overwhelm.
+      </p>
+
+      <a href="https://a8a5-darwin.systeme.io/36e6d282" class="btn">
+        I Want My Free Guide
+      </a>
+
+      <div class="note">
+        Free guide • Beginner friendly • No hype
       </div>
-    </header>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container narrow">
-        <span class="eyebrow">Soluciones inteligentes para pymes y profesionales</span>
-
-        <h1>Ahorra horas de trabajo cada semana sin contratar más personal</h1>
-
-        <p class="lead">
-          Implemento soluciones inteligentes que te ayudan a responder más rápido,
-          organizar mejor tu trabajo y eliminar tareas repetitivas sin complicarte con tecnología.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contacto">
-            Quiero más información
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROBLEMA -->
-    <section class="section section-soft">
-      <div class="container narrow">
-        <div class="section-copy">
-          <span class="eyebrow">El problema</span>
-          <h2>Tu negocio no necesita más herramientas. Necesita menos carga.</h2>
-
-          <p>
-            Si eres profesional o tienes una pyme, probablemente te pasa esto:
-          </p>
-        </div>
-
-        <div class="grid">
-          <article class="card">
-            <h3>Respondes lo mismo todos los días</h3>
-            <p>Clientes preguntando lo mismo, correos similares y mensajes repetitivos que consumen tiempo.</p>
-          </article>
-
-          <article class="card">
-            <h3>Te falta tiempo para lo importante</h3>
-            <p>Lo urgente se come tu día y terminas dejando de lado lo que realmente hace crecer tu negocio.</p>
-          </article>
-
-          <article class="card">
-            <h3>Hay desorden en tu operación</h3>
-            <p>Información dispersa, procesos poco claros y tareas que dependen completamente de ti.</p>
-          </article>
-
-          <article class="card">
-            <h3>Todo pasa por ti</h3>
-            <p>Tu negocio depende de tu tiempo y tu energía, lo que hace todo más lento y más agotador.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- AGITACIÓN -->
-    <section class="section">
-      <div class="container narrow">
-        <div class="section-copy">
-          <span class="eyebrow">Lo que está pasando</span>
-
-          <h2>El problema no es el trabajo. Es todo lo pequeño que se repite cada día.</h2>
-
-          <p>
-            Muchas tareas parecen simples, pero cuando se repiten constantemente,
-            terminan consumiendo tu tiempo, tu energía y tu capacidad de avanzar.
-          </p>
-
-          <p style="margin-top:1rem;">
-            Y lo peor es que no se ven como grandes problemas,
-            pero generan un desgaste constante.
-          </p>
-
-          <p style="margin-top:1rem;">
-            Ahí es donde necesitas apoyo real.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOLUCIÓN -->
-    <section class="section section-soft">
-      <div class="container narrow">
-        <div class="section-copy">
-          <span class="eyebrow">La solución</span>
-
-          <h2>Soluciones inteligentes diseñadas para ayudarte a trabajar mejor</h2>
-
-          <p>
-            Creo asistentes personalizados que se adaptan a tu negocio
-            y te ayudan a reducir carga operativa sin complicarte.
-          </p>
-        </div>
-
-        <div class="grid">
-          <article class="card">
-            <h3>Respuestas automáticas</h3>
-            <p>Para preguntas frecuentes y mensajes repetitivos.</p>
-          </article>
-
-          <article class="card">
-            <h3>Organización de información</h3>
-            <p>Para tener procesos más claros y ordenados.</p>
-          </article>
-
-          <article class="card">
-            <h3>Apoyo en tareas diarias</h3>
-            <p>Redacción, mensajes, ideas y trabajo operativo.</p>
-          </article>
-
-          <article class="card">
-            <h3>Adaptado a tu negocio</h3>
-            <p>No es genérico. Está pensado para tu forma de trabajar.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- BENEFICIOS -->
-    <section class="section">
-      <div class="container narrow">
-        <div class="section-copy">
-          <span class="eyebrow">Resultados</span>
-          <h2>Lo que puedes conseguir</h2>
-        </div>
-
-        <div class="grid">
-          <article class="card"><p>✔ Ahorrar tiempo cada día</p></article>
-          <article class="card"><p>✔ Responder más rápido</p></article>
-          <article class="card"><p>✔ Tener procesos más claros</p></article>
-          <article class="card"><p>✔ Reducir carga mental</p></article>
-          <article class="card"><p>✔ Trabajar con más orden</p></article>
-          <article class="card"><p>✔ Enfocarte en generar ingresos</p></article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROFESIONES -->
-    <section class="section section-soft">
-      <div class="container narrow">
-        <div class="section-copy">
-          <span class="eyebrow">A quién le sirve</span>
-          <h2>Soluciones aplicables a distintos tipos de negocio</h2>
-        </div>
-
-        <div class="profession-list">
-          {professions.map((p) => (
-            <span class="pill">{p}</span>
-          ))}
-        </div>
-
-        <div class="grid top-space">
-          <article class="card">
-            <h3>Abogados</h3>
-            <p>Clasificación de consultas, respuestas frecuentes y organización inicial.</p>
-          </article>
-
-          <article class="card">
-            <h3>Médicos</h3>
-            <p>Apoyo en comunicación informativa y procesos administrativos.</p>
-          </article>
-
-          <article class="card">
-            <h3>Esteticistas</h3>
-            <p>Atención a clientes, seguimiento y respuestas rápidas.</p>
-          </article>
-
-          <article class="card">
-            <h3>Eventos</h3>
-            <p>Gestión de solicitudes, mensajes y coordinación inicial.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA FINAL -->
-    <section id="contacto" class="section">
-      <div class="container narrow">
-
-        <div class="section-copy center">
-          <span class="eyebrow">Siguiente paso</span>
-
-          <h2>Menos tareas repetitivas. Más tiempo para tu negocio.</h2>
-
-          <p>
-            No necesitas cambiar cómo trabajas.
-            Solo necesitas apoyo en las partes que más tiempo te quitan.
-          </p>
-
-          <p style="margin-top:1rem;">
-            Déjame tus datos y te envío más información.
-          </p>
-
-          <p style="margin-top:1rem; font-weight:600;">
-            ✔ Sin compromiso · ✔ Respuesta simple · ✔ Adaptado a tu negocio
-          </p>
-        </div>
-
-        <div class="tally-wrap">
-          <iframe
-            src="https://tally.so/r/J9JpGR"
-            loading="lazy"
-            class="tally-frame"
-            title="Formulario Automaitech"
-          ></iframe>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-</BaseLayout>
+    </div>
+  </body>
+</html>

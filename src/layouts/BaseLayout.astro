@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-
+import Analytics from '@vercel/analytics/astro';
 
 interface Props {
   title?: string;
@@ -40,10 +40,11 @@ const image = `${siteUrl}/og-image.jpg`;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={image} />
+
+    <Analytics />
   </head>
 
   <body>
     <slot />
-   
   </body>
 </html>

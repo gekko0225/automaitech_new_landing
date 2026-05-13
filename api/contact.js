@@ -57,13 +57,23 @@ export default async function handler(request, response) {
     };
 
     await saveLead(scoredLead);
-    await sendNotification(scoredLead);
+
+    try {
+      await sendNotification(scoredLead);
+    } catch (error) {
+      console.error('Email notification failed:', error);
+      return response.status(502).json({
+        message: 'El lead se guardó, pero no se pudo enviar el correo de notificación.',
+        provider: 'resend'
+      });
+    }
 
     return response.status(200).json({ ok: true });
   } catch (error) {
-    console.error(error);
+    console.error('Lead form failed:', error);
     return response.status(500).json({
-      message: 'No se pudo enviar el formulario. Intenta de nuevo.'
+      message: 'No se pudo guardar el lead. Revisa la configuración de Supabase.',
+      provider: 'supabase'
     });
   }
 }

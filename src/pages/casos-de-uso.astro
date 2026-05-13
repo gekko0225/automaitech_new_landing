@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const cases = [
+  {
+    name: 'Clínicas estéticas y odontológicas',
+    pain: 'Reciben preguntas por tratamientos, precios y disponibilidad, pero no todos los contactos están listos para agendar.',
+    use: 'La landing captura tratamiento de interés, urgencia y datos de contacto para priorizar prospectos con mayor intención.'
+  },
+  {
+    name: 'Academias, cursos y formación',
+    pain: 'Las campañas generan interesados, pero el equipo comercial necesita saber programa, horario y nivel de urgencia.',
+    use: 'El formulario clasifica interesados por programa, necesidad y momento de compra para responder con mejor contexto.'
+  },
+  {
+    name: 'Servicios profesionales',
+    pain: 'Abogados, consultores, contadores y agencias reciben consultas poco claras que consumen tiempo antes de calificar.',
+    use: 'La landing ordena el motivo de consulta y ayuda a decidir si vale la pena agendar una llamada.'
+  },
+  {
+    name: 'Negocios locales',
+    pain: 'Muchos clientes preguntan por WhatsApp, pero el negocio responde sin saber qué buscan ni qué tan urgente es.',
+    use: 'La captura inicial permite identificar necesidad, zona, urgencia y siguiente paso recomendado.'
+  }
+];
+---
+
+<BaseLayout
+  title="Casos de uso | Automaitech"
+  description="Casos de uso de landings inteligentes para clínicas, academias, servicios profesionales y negocios locales."
+>
+  <main>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="logo" aria-label="Automaitech">Automaitech</a>
+        <nav class="nav" aria-label="Principal">
+          <a href="/landing-inteligente/">Servicio</a>
+          <a href="/casos-de-uso/">Casos de uso</a>
+          <a href="/#contacto">Contacto</a>
+        </nav>
+        <a class="header-cta" href="/#contacto">Diagnóstico</a>
+      </div>
+    </header>
+
+    <section class="page-hero compact">
+      <div class="container page-hero-inner single">
+        <div>
+          <span class="eyebrow">Casos de uso</span>
+          <h1>Un mismo sistema, adaptado al tipo de negocio</h1>
+          <p class="lead">
+            La landing inteligente funciona mejor en negocios donde el cliente necesita preguntar antes de comprar y donde responder rápido cambia la venta.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container use-case-grid">
+        {cases.map((item) => (
+          <article class="use-case-card">
+            <h2>{item.name}</h2>
+            <div>
+              <span>Dolor</span>
+              <p>{item.pain}</p>
+            </div>
+            <div>
+              <span>Aplicación</span>
+              <p>{item.use}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container split">
+        <div class="section-copy">
+          <span class="eyebrow">Criterio comercial</span>
+          <h2>El mejor nicho es el que ya vende por conversación</h2>
+        </div>
+        <p>
+          Si la venta requiere confianza, explicación o diagnóstico, una landing inteligente ayuda a ordenar el primer contacto. Por eso funciona mejor en salud estética, educación, servicios profesionales y negocios locales con atención por WhatsApp.
+        </p>
+      </div>
+    </section>
+
+    <section class="section contact-section">
+      <div class="container cta-panel">
+        <span class="eyebrow">Diagnóstico</span>
+        <h2>¿Tu negocio encaja en alguno de estos casos?</h2>
+        <p>
+          Déjame tus datos y reviso si tiene sentido crear una landing inteligente para captar y priorizar tus prospectos.
+        </p>
+        <a class="btn btn-primary" href="/#contacto">Solicitar revisión</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

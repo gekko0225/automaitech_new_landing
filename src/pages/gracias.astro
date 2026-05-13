@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const whatsappText = encodeURIComponent(
+  'Hola, acabo de enviar el formulario de Automaitech y quiero revisar si una landing inteligente aplica para mi negocio.'
+);
+
+const whatsappUrl = `https://wa.me/?text=${whatsappText}`;
+---
+
+<BaseLayout
+  title="Gracias | Automaitech"
+  description="Gracias por contactar a Automaitech. Revisaré tu información para saber si una landing inteligente aplica para tu negocio."
+>
+  <main>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="logo" aria-label="Automaitech">Automaitech</a>
+        <nav class="nav" aria-label="Principal">
+          <a href="/landing-inteligente/">Servicio</a>
+          <a href="/casos-de-uso/">Casos de uso</a>
+          <a href="/planes/">Planes</a>
+          <a href="/#contacto">Contacto</a>
+        </nav>
+        <a class="header-cta" href="/">Volver</a>
+      </div>
+    </header>
+
+    <section class="thank-you">
+      <div class="container thank-you-inner">
+        <div class="thank-you-copy">
+          <span class="eyebrow">Solicitud recibida</span>
+          <h1>Gracias. Ya tengo tu información.</h1>
+          <p class="lead">
+            Revisaré lo que enviaste para entender tu negocio, la urgencia y el tipo de landing que puede ayudarte a captar mejores prospectos por WhatsApp.
+          </p>
+
+          <div class="thank-you-actions">
+            <a class="btn btn-primary" href={whatsappUrl} target="_blank" rel="noreferrer">
+              Escribir por WhatsApp
+            </a>
+            <a class="btn btn-light" href="/">
+              Volver al inicio
+            </a>
+          </div>
+        </div>
+
+        <aside class="next-steps">
+          <h2>Qué pasa ahora</h2>
+          <ol>
+            <li>Reviso tu solicitud y el tipo de negocio.</li>
+            <li>Identifico si necesitas una versión esencial, profesional o una ampliación.</li>
+            <li>Te contacto con una recomendación clara para el siguiente paso.</li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const includes = [
+  'Estructura de página enfocada en conversión',
+  'Copy para explicar tu oferta con claridad',
+  'Formulario propio conectado a Supabase',
+  'Scoring para priorizar prospectos',
+  'Notificación por email con Resend',
+  'Mensaje sugerido para continuar por WhatsApp'
+];
+
+const differences = [
+  {
+    title: 'No solo recoge datos',
+    text: 'También captura contexto comercial: necesidad, urgencia y tipo de negocio.'
+  },
+  {
+    title: 'Ayuda a priorizar',
+    text: 'El lead llega con puntaje y prioridad para responder primero a quien tiene más intención.'
+  },
+  {
+    title: 'Prepara la conversación',
+    text: 'La información se convierte en una respuesta más rápida y específica por WhatsApp.'
+  }
+];
+---
+
+<BaseLayout
+  title="Landing inteligente | Automaitech"
+  description="Landing inteligente para pymes que quieren captar leads calificados y responder mejor por WhatsApp."
+>
+  <main>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="logo" aria-label="Automaitech">Automaitech</a>
+        <nav class="nav" aria-label="Principal">
+          <a href="/landing-inteligente/">Servicio</a>
+          <a href="/casos-de-uso/">Casos de uso</a>
+          <a href="/#contacto">Contacto</a>
+        </nav>
+        <a class="header-cta" href="/#contacto">Diagnóstico</a>
+      </div>
+    </header>
+
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+        <div>
+          <span class="eyebrow">Servicio principal</span>
+          <h1>Landing inteligente para captar leads por WhatsApp</h1>
+          <p class="lead">
+            Una página diseñada para transformar visitas en prospectos con contexto, calificar su intención y ayudarte a responder mejor.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/#contacto">Solicitar diagnóstico</a>
+            <a class="btn btn-light" href="/casos-de-uso/">Ver casos de uso</a>
+          </div>
+        </div>
+
+        <aside class="mini-demo">
+          <span>Flujo del sistema</span>
+          <ol>
+            <li>Visitante llega a la landing</li>
+            <li>Completa formulario inteligente</li>
+            <li>El sistema califica prioridad</li>
+            <li>Recibes correo y respondes por WhatsApp</li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="section-copy">
+          <span class="eyebrow">Qué resuelve</span>
+          <h2>Convierte tráfico en oportunidades comerciales ordenadas</h2>
+          <p>
+            Una landing tradicional suele quedarse en nombre, correo y teléfono. Esta versión está pensada para pymes que venden conversando: captura información útil antes de que empiece la conversación comercial.
+          </p>
+        </div>
+        <div class="content-card">
+          <h3>Ideal cuando necesitas saber:</h3>
+          <ul>
+            <li>Qué quiere resolver el prospecto.</li>
+            <li>Qué tan urgente es su necesidad.</li>
+            <li>Qué tipo de negocio tiene.</li>
+            <li>A quién debes contactar primero.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Qué incluye</span>
+          <h2>Una primera versión lista para captar y medir</h2>
+        </div>
+
+        <div class="check-grid">
+          {includes.map((item) => (
+            <article class="check-card">
+              <span>✓</span>
+              <p>{item}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Diferencia</span>
+          <h2>No es una página informativa. Es un sistema de captación simple.</h2>
+        </div>
+
+        <div class="feature-grid three">
+          {differences.map((item) => (
+            <article class="card">
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section">
+      <div class="container cta-panel">
+        <span class="eyebrow">Siguiente paso</span>
+        <h2>Revisemos si este servicio aplica para tu negocio</h2>
+        <p>
+          Envíame tus datos y te digo si necesitas una versión esencial, profesional o una ampliación posterior.
+        </p>
+        <a class="btn btn-primary" href="/#contacto">Solicitar diagnóstico</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

@@ -36,20 +36,23 @@ const niches = [
 
 const plans = [
   {
-    name: 'Esencial',
+    name: 'Esencial Inteligente',
+    price: '$1.200.000 COP',
     bestFor: 'Para validar rápido una oferta',
-    items: ['Landing responsive', 'Copy de conversión', 'Formulario de contacto', 'Botón de WhatsApp']
+    items: ['Landing de una página', 'Formulario propio', 'Supabase + Resend', 'Página de gracias']
   },
   {
     name: 'Profesional',
+    price: '$2.400.000 COP',
     bestFor: 'Para captar y priorizar prospectos',
     highlighted: true,
-    items: ['Todo lo del plan Esencial', 'Formulario inteligente', 'Scoring de leads', 'Registro en Google Sheets o panel simple']
+    items: ['Formulario inteligente', 'Scoring de leads', 'Email con resumen', 'Analytics básico']
   },
   {
     name: 'Premium',
+    price: '$4.500.000 COP',
     bestFor: 'Para automatizar seguimiento',
-    items: ['Todo lo del plan Profesional', 'Automatizaciones', 'Integración con CRM', 'Métricas y optimización inicial']
+    items: ['Adaptación al nicho', 'Automatización inicial', 'CRM o Sheets adicional', 'Optimización 15 días']
   }
 ];
 ---
@@ -63,8 +66,9 @@ const plans = [
       <div class="container header-inner">
         <a href="/" class="logo" aria-label="Automaitech">Automaitech</a>
         <nav class="nav" aria-label="Principal">
-          <a href="#solucion">Solución</a>
-          <a href="#planes">Planes</a>
+          <a href="/landing-inteligente/">Servicio</a>
+          <a href="/casos-de-uso/">Casos de uso</a>
+          <a href="/planes/">Planes</a>
           <a href="#contacto">Contacto</a>
         </nav>
         <a class="header-cta" href="#contacto">Diagnóstico</a>
@@ -221,6 +225,7 @@ const plans = [
               {plan.highlighted && <span class="plan-badge">Recomendado</span>}
               <h3>{plan.name}</h3>
               <p>{plan.bestFor}</p>
+              <strong class="plan-price small">{plan.price}</strong>
               <ul>
                 {plan.items.map((item) => (
                   <li>{item}</li>
@@ -241,6 +246,23 @@ const plans = [
         <p>
           Si el negocio necesita más, se puede extender con reservas, CRM simple, catálogos, encuestas, menú digital, automatizaciones o integración con herramientas existentes. Primero validamos captación; después ampliamos.
         </p>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container link-grid">
+        <a class="link-card" href="/landing-inteligente/">
+          <span>Servicio</span>
+          <strong>Ver landing inteligente</strong>
+        </a>
+        <a class="link-card" href="/casos-de-uso/">
+          <span>Nichos</span>
+          <strong>Explorar casos de uso</strong>
+        </a>
+        <a class="link-card" href="/sobre-mi/">
+          <span>Confianza</span>
+          <strong>Conocer Automaitech</strong>
+        </a>
       </div>
     </section>
 
@@ -342,7 +364,14 @@ const plans = [
           body: JSON.stringify(data)
         });
 
-        const result = await response.json();
+        const responseText = await response.text();
+        let result = {};
+
+        try {
+          result = responseText ? JSON.parse(responseText) : {};
+        } catch {
+          throw new Error('La ruta /api/contact no está respondiendo como API. Revisa que el dominio esté apuntando al proyecto correcto en Vercel.');
+        }
 
         if (!response.ok) {
           throw new Error(result.message || 'No se pudo enviar el formulario.');
@@ -350,6 +379,7 @@ const plans = [
 
         form.reset();
         status.textContent = 'Listo. Recibí tu información y te responderé pronto.';
+        window.location.href = '/gracias/';
       } catch (error) {
         status.textContent = error instanceof Error
           ? error.message

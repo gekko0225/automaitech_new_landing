@@ -1,0 +1,171 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const plans = [
+  {
+    name: 'Esencial Inteligente',
+    price: '$1.200.000 COP',
+    time: '3 a 5 días hábiles',
+    intent: 'Para validar rápido una oferta y empezar a captar prospectos.',
+    items: [
+      'Landing de una página',
+      'Copy base orientado a conversión',
+      'Formulario propio',
+      'Botón de WhatsApp',
+      'Guardado de leads en Supabase',
+      'Notificación por email con Resend',
+      'Página de gracias',
+      '1 ronda de ajustes'
+    ]
+  },
+  {
+    name: 'Profesional',
+    price: '$2.400.000 COP',
+    time: '5 a 8 días hábiles',
+    intent: 'Para captar leads con contexto y priorizar oportunidades.',
+    highlighted: true,
+    items: [
+      'Todo lo del plan Esencial',
+      'Formulario inteligente con preguntas estratégicas',
+      'Scoring de leads',
+      'Priorización alta, media y baja',
+      'Email con resumen del lead',
+      'Mensaje sugerido para WhatsApp',
+      'Analytics básico',
+      'Política de privacidad',
+      '2 rondas de ajustes'
+    ]
+  },
+  {
+    name: 'Premium',
+    price: '$4.500.000 COP',
+    time: '10 a 15 días hábiles',
+    intent: 'Para clínicas, academias o servicios con ticket alto.',
+    items: [
+      'Todo lo del plan Profesional',
+      'Adaptación específica al nicho',
+      'Investigación básica de oferta y competencia',
+      'Automatización inicial de seguimiento',
+      'Integración con CRM o Google Sheets adicional',
+      'Dashboard simple de leads',
+      'Optimización posterior de 15 días',
+      '3 rondas de ajustes'
+    ]
+  }
+];
+
+const supportPlans = [
+  {
+    name: 'Soporte básico',
+    price: '$150.000 COP/mes',
+    text: 'Cambios menores, monitoreo y soporte.'
+  },
+  {
+    name: 'Optimización',
+    price: '$450.000 COP/mes',
+    text: 'Ajustes de copy, revisión de leads y mejoras de conversión.'
+  },
+  {
+    name: 'Growth',
+    price: '$900.000 COP/mes',
+    text: 'Optimización continua, reportes y nuevas variantes.'
+  }
+];
+---
+
+<BaseLayout
+  title="Planes | Automaitech"
+  description="Planes y precios de landings inteligentes para pymes que quieren captar leads por WhatsApp."
+>
+  <main>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="logo" aria-label="Automaitech">Automaitech</a>
+        <nav class="nav" aria-label="Principal">
+          <a href="/landing-inteligente/">Servicio</a>
+          <a href="/casos-de-uso/">Casos de uso</a>
+          <a href="/#contacto">Contacto</a>
+        </nav>
+        <a class="header-cta" href="/#contacto">Diagnóstico</a>
+      </div>
+    </header>
+
+    <section class="page-hero compact">
+      <div class="container page-hero-inner single">
+        <div>
+          <span class="eyebrow">Planes</span>
+          <h1>Planes para captar leads por WhatsApp sin construir una plataforma enorme</h1>
+          <p class="lead">
+            Empieza con una versión concreta, mide si llegan mejores prospectos y amplía solo cuando el negocio lo justifique.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container pricing-grid">
+        {plans.map((plan) => (
+          <article class:list={['plan-card', { featured: plan.highlighted }]}>
+            {plan.highlighted && <span class="plan-badge">Recomendado</span>}
+            <h2>{plan.name}</h2>
+            <p>{plan.intent}</p>
+            <strong class="plan-price">{plan.price}</strong>
+            <span class="plan-time">{plan.time}</span>
+            <ul>
+              {plan.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Soporte mensual opcional</span>
+          <h2>Después de publicar, puedes mantener y mejorar la captación</h2>
+        </div>
+
+        <div class="support-grid">
+          {supportPlans.map((plan) => (
+            <article class="support-card">
+              <h3>{plan.name}</h3>
+              <strong>{plan.price}</strong>
+              <p>{plan.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="section-copy">
+          <span class="eyebrow">Condiciones</span>
+          <h2>Precios pensados para pymes que necesitan velocidad y claridad</h2>
+        </div>
+        <div class="content-card">
+          <ul>
+            <li>Los precios no incluyen pauta publicitaria.</li>
+            <li>Dominio, hosting o herramientas externas se revisan según cada caso.</li>
+            <li>Integraciones adicionales se cotizan por separado.</li>
+            <li>El inicio requiere información base del negocio y aprobación del alcance.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section">
+      <div class="container cta-panel">
+        <span class="eyebrow">Recomendado</span>
+        <h2>El plan Profesional es el mejor punto de partida</h2>
+        <p>
+          Tiene lo necesario para captar, calificar y responder mejor sin saltar todavía a automatizaciones más grandes.
+        </p>
+        <a class="btn btn-primary" href="/#contacto">Solicitar diagnóstico</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

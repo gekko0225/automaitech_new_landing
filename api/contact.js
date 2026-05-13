@@ -14,6 +14,14 @@ const needLabels = {
 };
 
 export default async function handler(request, response) {
+  if (request.method === 'GET') {
+    return response.status(200).json({
+      ok: true,
+      route: '/api/contact',
+      configured: requiredEnv.every((key) => Boolean(process.env[key]))
+    });
+  }
+
   if (request.method !== 'POST') {
     return response.status(405).json({ message: 'Método no permitido.' });
   }

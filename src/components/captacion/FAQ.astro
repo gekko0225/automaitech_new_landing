@@ -1,0 +1,110 @@
+---
+import SectionTitle from '../common/SectionTitle.astro';
+
+const faqs = [
+  ['¿Esto reemplaza a mi equipo?', 'No. Reduce tareas repetitivas para que tu equipo pueda enfocarse en atender mejor.'],
+  ['¿Necesito saber de tecnología?', 'No. Nosotros implementamos el sistema y te explicamos cómo usarlo.'],
+  ['¿Sirve para mi negocio?', 'Sí, si trabajas con citas: clínicas, estéticas, abogados, spas, veterinarias, entrenadores y similares.'],
+  ['¿Puedo seguir usando WhatsApp?', 'Sí. Mejoramos la atención sin cambiar cómo tus clientes ya te contactan.'],
+  ['¿El sistema agenda automáticamente?', 'Sí. El cliente puede consultar información, elegir horario y recibir confirmación.'],
+  ['¿Cuánto tarda la implementación?', 'Depende del caso, pero buscamos dejarlo funcionando de forma simple y rápida.'],
+  ['¿Qué pasa si ya tengo agenda?', 'Adaptamos el flujo a tu proceso actual siempre que sea viable.'],
+  ['¿El precio incluye capacitación?', 'Sí. Incluye implementación, capacitación y soporte inicial.'],
+];
+---
+
+<section id="faq" class="faq-v2">
+  <div class="container">
+    <SectionTitle
+      eyebrow="Preguntas frecuentes"
+      title="Todo claro antes de empezar."
+      description="Respondemos las dudas más comunes para que puedas decidir con confianza."
+    />
+
+    <div class="faq-list">
+      {faqs.map(([question, answer]) => (
+        <details>
+          <summary>
+            <span>{question}</span>
+            <strong>+</strong>
+          </summary>
+          <p>{answer}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-v2 {
+    padding: 120px 0;
+    background: #f8fafc;
+  }
+
+  .faq-list {
+    display: grid;
+    gap: 14px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  details {
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    background: rgba(255,255,255,.9);
+    padding: 22px 24px;
+    box-shadow: 0 12px 34px rgba(15, 23, 42, .045);
+  }
+
+  summary {
+    display: flex;
+    cursor: pointer;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary span {
+    color: #0f172a;
+    font-weight: 800;
+    letter-spacing: -.01em;
+  }
+
+  summary strong {
+    display: grid;
+    width: 30px;
+    height: 30px;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 22px;
+    line-height: 1;
+    transition: .2s ease;
+  }
+
+  details[open] summary strong {
+    transform: rotate(45deg);
+    background: #2563eb;
+    color: white;
+  }
+
+  details p {
+    margin: 16px 0 0;
+    max-width: 720px;
+    color: #475569;
+    line-height: 1.75;
+  }
+
+  @media (max-width: 720px) {
+    .faq-v2 {
+      padding: 86px 0;
+    }
+  }
+</style>

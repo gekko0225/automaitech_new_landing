@@ -1,0 +1,363 @@
+---
+import SectionTitle from "../common/SectionTitle.astro";
+
+const features = [
+  {
+    title: "Catálogo digital",
+    text: "Tus servicios organizados para que el cliente encuentre información clara desde cualquier dispositivo.",
+  },
+  {
+    title: "Agenda automática",
+    text: "El cliente elige un horario disponible sin esperar una respuesta manual.",
+  },
+  {
+    title: "Captura de prospectos",
+    text: "Cada conversación queda registrada para dar seguimiento y convertir más oportunidades.",
+  },
+  {
+    title: "Implementación completa",
+    text: "Nos encargamos de diseñar, configurar y dejar funcionando todo el sistema.",
+  },
+  {
+    title: "Capacitación",
+    text: "Aprendes a utilizar el sistema de forma sencilla y sin conocimientos técnicos.",
+  },
+];
+---
+
+<section id="incluye" class="includes-v2">
+  <div class="container">
+    <SectionTitle
+      eyebrow="Qué incluye"
+      title="Todo lo necesario para automatizar la captación de clientes."
+      description="No instalamos herramientas. Diseñamos un sistema completo que se adapta a la forma en que ya trabaja tu negocio."
+    />
+
+    <div class="layout">
+      <aside class="main-card">
+        <small>Sistema inteligente</small>
+
+<h3>
+Tu negocio sigue trabajando.
+El sistema hace el resto.
+</h3>
+
+<div class="flow">
+
+    <div class="flow-card">
+        <span>Cliente</span>
+        <strong>Nuevo mensaje</strong>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="flow-card active">
+
+        <span>Sistema</span>
+
+        <strong>Atiende automáticamente</strong>
+
+        <ul>
+
+            <li>Responde preguntas</li>
+
+            <li>Filtra clientes</li>
+
+            <li>Agenda citas</li>
+
+        </ul>
+
+    </div>
+
+    <div class="line"></div>
+
+    <div class="flow-card">
+
+        <span>Resultado</span>
+
+        <strong>Cliente confirmado</strong>
+
+    </div>
+
+</div>
+      </aside>
+
+      <div class="feature-grid">
+        {features.map((feature) => (
+          <article class="feature">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M5 13l4 4L19 7"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+
+            <h4>{feature.title}</h4>
+            <p>{feature.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+
+  .flow{
+
+margin-top:34px;
+
+display:grid;
+
+gap:18px;
+
+}
+
+.flow-card{
+
+padding:22px;
+
+border-radius:20px;
+
+background:white;
+
+border:1px solid #E2E8F0;
+
+box-shadow:0 8px 20px rgba(15,23,42,.05);
+
+}
+
+.flow-card span{
+
+display:block;
+
+font-size:13px;
+
+font-weight:800;
+
+letter-spacing:.12em;
+
+text-transform:uppercase;
+
+color:#2563EB;
+
+}
+
+.flow-card strong{
+
+display:block;
+
+margin-top:8px;
+
+font-size:22px;
+
+letter-spacing:-.03em;
+
+color:#0F172A;
+
+}
+
+.flow-card ul{
+
+margin:18px 0 0;
+
+padding:0;
+
+display:grid;
+
+gap:10px;
+
+list-style:none;
+
+}
+
+.flow-card li{
+
+color:#475569;
+
+}
+
+.flow-card li::before{
+
+content:"✓";
+
+margin-right:10px;
+
+color:#16A34A;
+
+font-weight:700;
+
+}
+
+.line{
+
+width:2px;
+
+height:26px;
+
+margin:auto;
+
+background:linear-gradient(#2563EB,#06B6D4);
+
+border-radius:999px;
+
+}
+
+.active{
+
+background:
+linear-gradient(135deg,#ffffff,#F8FAFC);
+
+}
+  .includes-v2 {
+    padding: 120px 0;
+    background: #ffffff;
+  }
+
+  .layout {
+    display: grid;
+    gap: 30px;
+    align-items: start;
+  }
+
+  .main-card {
+    position: relative;
+    overflow: hidden;
+    padding: 34px;
+    border-radius: 28px;
+    border: 1px solid #e2e8f0;
+    background:
+      radial-gradient(circle at top right, rgba(37, 99, 235, .12), transparent 38%),
+      linear-gradient(135deg, #ffffff, #f8fafc);
+    box-shadow: 0 25px 70px rgba(15, 23, 42, .08);
+  }
+
+  .main-card small {
+    display: inline-block;
+    padding: .55rem .9rem;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .main-card h3 {
+    margin: 28px 0 0;
+    font-size: 30px;
+    line-height: 1.1;
+    letter-spacing: -.04em;
+    color: #0f172a;
+  }
+
+  .main-card p {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #475569;
+  }
+
+  .stats {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .stats div {
+    padding: 18px;
+    border-radius: 18px;
+    background: white;
+    border: 1px solid #e2e8f0;
+  }
+
+  .stats strong {
+    display: block;
+    font-size: 32px;
+    color: #2563eb;
+    letter-spacing: -.04em;
+  }
+
+  .stats span {
+    color: #64748b;
+    font-size: 14px;
+  }
+
+  .feature-grid {
+    display: grid;
+    gap: 20px;
+  }
+
+  .feature {
+    padding: 28px;
+    border-radius: 22px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    transition: .25s;
+    box-shadow: 0 10px 30px rgba(15,23,42,.04);
+  }
+
+  .feature:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(15,23,42,.08);
+    border-color: #bfdbfe;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: linear-gradient(135deg,#2563eb,#06b6d4);
+    color: white;
+    margin-bottom: 24px;
+  }
+
+  .icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .feature h4 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -.02em;
+    color: #0f172a;
+  }
+
+  .feature p {
+    margin-top: 12px;
+    line-height: 1.75;
+    color: #475569;
+  }
+
+  @media (min-width: 900px) {
+    .layout {
+      grid-template-columns: 1.1fr .9fr;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .feature-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .stats {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+

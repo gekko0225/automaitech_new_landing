@@ -1,0 +1,329 @@
+---
+import Button from '../ui/Button.astro';
+import Badge from '../ui/Badge.astro';
+---
+
+<section class="hero-v2">
+  <div class="hero-bg"></div>
+
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <Badge>Sistema de Captación y Agendamiento</Badge>
+
+      <h1>
+        Deja de perder clientes por responder WhatsApp manualmente.
+      </h1>
+
+      <p>
+        Implementamos un sistema inteligente que convierte conversaciones en citas agendadas automáticamente y te ayuda a recuperar horas de trabajo cada semana.
+      </p>
+
+      <div class="actions">
+        <Button href="https://calendly.com/automaitech/30min">
+          Agenda una llamada
+        </Button>
+
+        <Button href="https://wa.me/573128460832" variant="secondary">
+          Hablar por WhatsApp
+        </Button>
+      </div>
+
+      <div class="proof">
+        <span>Sin conocimientos técnicos</span>
+        <span>Implementación completa</span>
+        <span>Capacitación incluida</span>
+      </div>
+    </div>
+
+    <div class="product-card reveal">
+      <div class="window-bar">
+        <span></span><span></span><span></span>
+      </div>
+
+      <div class="pipeline">
+        <div class="source">
+          <small>Nuevo prospecto</small>
+          <strong>Instagram</strong>
+          <p>“Hola, quiero información”</p>
+        </div>
+
+        <div class="connector"></div>
+
+        <div class="system-box">
+          <div>
+            <small>Sistema inteligente</small>
+            <strong>Atiende y agenda</strong>
+          </div>
+
+          <ul>
+            <li>Responde dudas frecuentes</li>
+            <li>Filtra intención del cliente</li>
+            <li>Muestra horarios disponibles</li>
+          </ul>
+        </div>
+
+        <div class="connector"></div>
+
+        <div class="confirmation">
+          <span>✓</span>
+          <div>
+            <strong>Cita confirmada</strong>
+            <p>Martes, 10:30 AM</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="floating-note note-one">
+        + Prospecto guardado
+      </div>
+
+      <div class="floating-note note-two">
+        Agenda actualizada
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-v2 {
+    position: relative;
+    overflow: hidden;
+    padding: 92px 0 120px;
+    background: #ffffff;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 78% 20%, rgba(37, 99, 235, .16), transparent 28%),
+      radial-gradient(circle at 88% 60%, rgba(6, 182, 212, .14), transparent 24%),
+      linear-gradient(rgba(15, 23, 42, .035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(15, 23, 42, .035) 1px, transparent 1px);
+    background-size: auto, auto, 48px 48px, 48px 48px;
+    mask-image: linear-gradient(to bottom, black 70%, transparent);
+    pointer-events: none;
+  }
+
+  .hero-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 72px;
+    align-items: center;
+  }
+
+  .hero-copy {
+    max-width: 690px;
+  }
+
+  h1 {
+    margin: 26px 0 0;
+    color: #0f172a;
+    font-size: clamp(2.8rem, 6vw, 4.4rem);
+    line-height: .98;
+    font-weight: 800;
+    letter-spacing: -.06em;
+  }
+
+  .hero-copy p {
+    max-width: 620px;
+    margin: 28px 0 0;
+    color: #475569;
+    font-size: 19px;
+    line-height: 1.85;
+  }
+
+  .actions {
+    margin-top: 38px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .proof {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    color: #64748b;
+    font-size: 14px;
+  }
+
+  .proof span {
+    border: 1px solid #e2e8f0;
+    border-radius: 999px;
+    background: rgba(255,255,255,.8);
+    padding: 9px 13px;
+  }
+
+  .product-card {
+    position: relative;
+    border: 1px solid rgba(226, 232, 240, .95);
+    border-radius: 28px;
+    background: rgba(255,255,255,.86);
+    box-shadow: 0 30px 80px rgba(15, 23, 42, .12);
+    backdrop-filter: blur(18px);
+    padding: 20px;
+  }
+
+  .window-bar {
+    display: flex;
+    gap: 8px;
+    padding: 6px 6px 18px;
+  }
+
+  .window-bar span {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: #cbd5e1;
+  }
+
+  .pipeline {
+    display: grid;
+    gap: 16px;
+  }
+
+  .source,
+  .system-box,
+  .confirmation {
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    background: #ffffff;
+    padding: 22px;
+  }
+
+  small {
+    display: block;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+
+  strong {
+    display: block;
+    margin-top: 8px;
+    color: #0f172a;
+    font-size: 20px;
+    letter-spacing: -.02em;
+  }
+
+  .source p,
+  .confirmation p {
+    margin: 8px 0 0;
+    color: #475569;
+  }
+
+  .system-box {
+    background:
+      radial-gradient(circle at top right, rgba(6, 182, 212, .16), transparent 38%),
+      linear-gradient(135deg, #ffffff, #f8fafc);
+  }
+
+  .system-box ul {
+    margin: 18px 0 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+    list-style: none;
+  }
+
+  .system-box li {
+    color: #334155;
+    font-weight: 600;
+  }
+
+  .system-box li::before {
+    content: "✓";
+    margin-right: 10px;
+    color: #16a34a;
+    font-weight: 800;
+  }
+
+  .connector {
+    width: 2px;
+    height: 28px;
+    margin: -4px auto;
+    background: linear-gradient(#2563eb, #06b6d4);
+    border-radius: 999px;
+  }
+
+  .confirmation {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .confirmation span {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    border-radius: 999px;
+    background: #dcfce7;
+    color: #16a34a;
+    font-weight: 900;
+  }
+
+  .floating-note {
+    position: absolute;
+    display: none;
+    border: 1px solid #e2e8f0;
+    border-radius: 999px;
+    background: white;
+    padding: 11px 15px;
+    color: #0f172a;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 16px 35px rgba(15, 23, 42, .1);
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .note-one {
+    top: 26%;
+    right: -34px;
+  }
+
+  .note-two {
+    bottom: 18%;
+    left: -28px;
+    animation-delay: 1s;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-grid {
+      grid-template-columns: 1.04fr .96fr;
+    }
+
+    .floating-note {
+      display: block;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .hero-v2 {
+      padding: 64px 0 84px;
+    }
+
+    h1 {
+      font-size: clamp(2.45rem, 13vw, 3.4rem);
+    }
+
+    .actions a {
+      width: 100%;
+    }
+  }
+</style>

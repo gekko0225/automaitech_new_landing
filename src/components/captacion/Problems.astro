@@ -1,0 +1,132 @@
+---
+import SectionTitle from '../common/SectionTitle.astro';
+
+const problems = [
+  ['Respondes manualmente', 'Tu tiempo se va en contestar las mismas preguntas una y otra vez.'],
+  ['Llegas tarde', 'El cliente escribe, espera demasiado y termina buscando otra opción.'],
+  ['Agenda desordenada', 'Citas en chats, notas, llamadas y mensajes que se pierden.'],
+  ['Preguntas repetidas', 'Precios, horarios y disponibilidad consumen horas cada semana.'],
+  ['Sin seguimiento', 'Los prospectos preguntan, se van y nadie vuelve a contactarlos.'],
+];
+---
+
+<section class="problems-v2">
+  <div class="container">
+    <SectionTitle
+      eyebrow="Problemas"
+      title="El problema no es la falta de clientes. Es la fricción para atenderlos."
+      description="Cuando cada conversación depende de una respuesta manual, las oportunidades se enfrían y tu equipo pierde tiempo operativo."
+    />
+
+    <div class="problem-shell">
+      {problems.map(([title, text], index) => (
+        <article class={`problem-card card-${index + 1}`}>
+          <span class="number">0{index + 1}</span>
+          <h3>{title}</h3>
+          <p>{text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .problems-v2 {
+    position: relative;
+    padding: 110px 0;
+    background:
+      radial-gradient(circle at 10% 20%, rgba(37, 99, 235, .08), transparent 24%),
+      #f8fafc;
+  }
+
+  .problem-shell {
+    display: grid;
+    gap: 18px;
+  }
+
+  .problem-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 220px;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    background: rgba(255,255,255,.86);
+    box-shadow: 0 14px 40px rgba(15,23,42,.06);
+    transition: .22s ease;
+  }
+
+  .problem-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(37,99,235,.08), rgba(6,182,212,.05));
+    opacity: 0;
+    transition: .22s ease;
+  }
+
+  .problem-card:hover {
+    transform: translateY(-5px);
+    border-color: #bfdbfe;
+  }
+
+  .problem-card:hover::before {
+    opacity: 1;
+  }
+
+  .number {
+    position: relative;
+    z-index: 1;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .16em;
+  }
+
+  .problem-card h3 {
+    position: relative;
+    z-index: 1;
+    margin: 44px 0 0;
+    color: #0f172a;
+    font-size: 24px;
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -.03em;
+  }
+
+  .problem-card p {
+    position: relative;
+    z-index: 1;
+    margin: 14px 0 0;
+    color: #475569;
+    line-height: 1.75;
+  }
+
+  @media (min-width: 760px) {
+    .problem-shell {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .problem-card {
+      grid-column: span 3;
+    }
+
+    .card-5 {
+      grid-column: 2 / span 4;
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .problem-card {
+      grid-column: span 2;
+    }
+
+    .card-4 {
+      grid-column: 2 / span 2;
+    }
+
+    .card-5 {
+      grid-column: span 2;
+    }
+  }
+</style>

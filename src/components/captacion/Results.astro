@@ -1,0 +1,274 @@
+---
+import Button from '../ui/Button.astro';
+
+const results = [
+  'Más citas agendadas',
+  'Menos tiempo respondiendo',
+  'Agenda más organizada',
+  'Prospectos mejor registrados',
+  'Mejor experiencia del cliente',
+];
+---
+
+<section class="results-v2">
+  <div class="container results-grid">
+    <div class="copy">
+      <p class="eyebrow">Resultados</p>
+
+      <h2>
+        Menos mensajes repetidos. Más citas listas para atender.
+      </h2>
+
+      <p>
+        El sistema reduce la fricción entre el interés del cliente y la reserva,
+        ayudando a que tu negocio responda más rápido, capture oportunidades y
+        trabaje con mayor orden.
+      </p>
+
+      <Button href="https://calendly.com/automaitech/30min">
+        Agenda una llamada gratuita
+      </Button>
+    </div>
+
+    <div class="dashboard">
+      <div class="dashboard-header">
+        <div>
+          <small>Resumen operativo</small>
+          <strong>Captación activa</strong>
+        </div>
+        <span>En marcha</span>
+      </div>
+
+      <div class="metrics">
+        <div class="metric large">
+          <small>Citas generadas</small>
+          <strong>+32%</strong>
+          <p>Más conversaciones terminan en reserva.</p>
+        </div>
+
+        <div class="metric">
+          <small>Tiempo recuperado</small>
+          <strong>6h</strong>
+          <p>Menos atención repetitiva cada semana.</p>
+        </div>
+
+        <div class="metric">
+          <small>Respuesta inicial</small>
+          <strong>Instantánea</strong>
+          <p>El cliente no queda esperando.</p>
+        </div>
+      </div>
+
+      <div class="result-list">
+        {results.map((item) => (
+          <div>
+            <span>✓</span>
+            <p>{item}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .results-v2 {
+    padding: 120px 0;
+    background:
+      radial-gradient(circle at 12% 18%, rgba(37, 99, 235, .1), transparent 26%),
+      radial-gradient(circle at 85% 80%, rgba(6, 182, 212, .1), transparent 24%),
+      #f8fafc;
+  }
+
+  .results-grid {
+    display: grid;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .eyebrow {
+    margin-bottom: 14px;
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    max-width: 650px;
+    margin: 0;
+    color: #0f172a;
+    font-size: clamp(2rem, 4vw, 2.9rem);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -.045em;
+  }
+
+  .copy > p:not(.eyebrow) {
+    max-width: 620px;
+    margin: 24px 0 36px;
+    color: #475569;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .dashboard {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 30px;
+    background: rgba(255,255,255,.9);
+    padding: 24px;
+    box-shadow: 0 30px 80px rgba(15, 23, 42, .1);
+  }
+
+  .dashboard::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    right: -100px;
+    top: -100px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+    opacity: .11;
+    filter: blur(45px);
+  }
+
+  .dashboard-header,
+  .metrics,
+  .result-list {
+    position: relative;
+    z-index: 1;
+  }
+
+  .dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 20px;
+  }
+
+  .dashboard-header small {
+    display: block;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+  }
+
+  .dashboard-header strong {
+    display: block;
+    margin-top: 7px;
+    color: #0f172a;
+    font-size: 22px;
+    letter-spacing: -.03em;
+  }
+
+  .dashboard-header span {
+    border-radius: 999px;
+    background: #dcfce7;
+    padding: 8px 12px;
+    color: #16a34a;
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  .metrics {
+    display: grid;
+    gap: 16px;
+    margin-top: 22px;
+  }
+
+  .metric {
+    border: 1px solid #e2e8f0;
+    border-radius: 22px;
+    background: #ffffff;
+    padding: 22px;
+  }
+
+  .metric small {
+    display: block;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  .metric strong {
+    display: block;
+    margin-top: 10px;
+    color: #2563eb;
+    font-size: 34px;
+    line-height: 1;
+    letter-spacing: -.05em;
+  }
+
+  .metric p {
+    margin: 12px 0 0;
+    color: #475569;
+    line-height: 1.6;
+  }
+
+  .result-list {
+    margin-top: 18px;
+    display: grid;
+    gap: 10px;
+  }
+
+  .result-list div {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    background: #ffffff;
+    padding: 14px 16px;
+  }
+
+  .result-list span {
+    display: grid;
+    width: 24px;
+    height: 24px;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 999px;
+    background: #dcfce7;
+    color: #16a34a;
+    font-weight: 900;
+  }
+
+  .result-list p {
+    margin: 0;
+    color: #0f172a;
+    font-weight: 700;
+  }
+
+  @media (min-width: 900px) {
+    .results-grid {
+      grid-template-columns: .9fr 1.1fr;
+    }
+
+    .metrics {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .metric.large {
+      grid-column: span 2;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .results-v2 {
+      padding: 86px 0;
+    }
+
+    .dashboard-header {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+</style>

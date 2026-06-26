@@ -1,0 +1,94 @@
+---
+import SectionTitle from '../common/SectionTitle.astro';
+
+const steps = [
+  ['01', 'El cliente llega', 'Desde Instagram, anuncios, recomendaciones o tu página web.'],
+  ['02', 'Consulta información', 'Recibe respuestas claras sobre servicios, horarios y disponibilidad.'],
+  ['03', 'Agenda automáticamente', 'Elige un horario disponible sin esperar respuesta manual.'],
+  ['04', 'Recibe confirmación', 'La cita queda organizada y lista para atender.'],
+];
+---
+
+<section class="how-v2">
+  <div class="container">
+    <SectionTitle
+      eyebrow="Cómo funciona"
+      title="Un flujo simple para convertir interés en citas."
+      description="El sistema acompaña al cliente desde el primer mensaje hasta la confirmación, sin agregar carga operativa a tu equipo."
+    />
+
+    <div class="steps-line">
+      {steps.map(([number, title, text]) => (
+        <article class="step-card">
+          <span class="step-number">{number}</span>
+          <h3>{title}</h3>
+          <p>{text}</p>
+        </article>
+      ))}
+    </div>
+
+    <div class="manual-note">
+      Todo ocurre sin trabajo manual.
+    </div>
+  </div>
+</section>
+
+<style>
+  .how-v2 {
+    padding: 120px 0;
+    background: #f8fafc;
+  }
+
+  .steps-line {
+    display: grid;
+    gap: 18px;
+  }
+
+  .step-card {
+    min-height: 230px;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    background: white;
+    padding: 30px;
+    box-shadow: 0 14px 38px rgba(15,23,42,.055);
+  }
+
+  .step-number {
+    display: inline-flex;
+    border-radius: 999px;
+    background: #eff6ff;
+    padding: 8px 12px;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 900;
+  }
+
+  .step-card h3 {
+    margin: 46px 0 0;
+    color: #0f172a;
+    font-size: 23px;
+    font-weight: 800;
+  }
+
+  .step-card p {
+    margin: 14px 0 0;
+    color: #475569;
+    line-height: 1.75;
+  }
+
+  .manual-note {
+    width: fit-content;
+    margin: 44px auto 0;
+    border-radius: 999px;
+    background: white;
+    padding: 14px 20px;
+    color: #2563eb;
+    font-weight: 800;
+  }
+
+  @media (min-width: 960px) {
+    .steps-line {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>

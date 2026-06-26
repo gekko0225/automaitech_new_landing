@@ -1,0 +1,135 @@
+---
+import Button from '../ui/Button.astro';
+import Badge from '../ui/Badge.astro';
+---
+
+<section class="final-cta-v2">
+  <div class="container">
+    <div class="cta-box">
+      <div class="cta-bg"></div>
+
+      <Badge tone="white">Llamada gratuita</Badge>
+
+      <h2>
+        ¿Listo para dejar de responder el mismo mensaje una y otra vez?
+      </h2>
+
+      <p>
+        Agenda una llamada y revisamos cómo un sistema inteligente puede ayudarte
+        a recuperar tiempo, organizar tu agenda y convertir más conversaciones en citas.
+      </p>
+
+      <div class="actions">
+        <Button href="https://calendly.com/automaitech/30min" variant="light">
+          Agenda una llamada gratuita
+        </Button>
+
+        <a href="https://wa.me/573128460832" class="whatsapp">
+          WhatsApp
+        </a>
+      </div>
+
+      <span class="small-note">
+        Sin compromiso. En menos de 30 minutos.
+      </span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .final-cta-v2 {
+    padding: 120px 0;
+    background: #ffffff;
+  }
+
+  .cta-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 34px;
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+    padding: 70px 24px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 30px 80px rgba(37, 99, 235, .22);
+  }
+
+  .cta-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(255,255,255,.22), transparent 28%),
+      radial-gradient(circle at 85% 80%, rgba(255,255,255,.18), transparent 26%),
+      linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+    background-size: auto, auto, 46px 46px, 46px 46px;
+    pointer-events: none;
+  }
+
+  .cta-box > *:not(.cta-bg) {
+    position: relative;
+    z-index: 1;
+  }
+
+  h2 {
+    max-width: 880px;
+    margin: 26px auto 0;
+    color: white;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -.06em;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 24px auto 0;
+    color: rgba(255,255,255,.86);
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .actions {
+    margin-top: 38px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .whatsapp {
+    display: inline-flex;
+    height: 52px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,.45);
+    border-radius: 14px;
+    padding-inline: 28px;
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+    transition: .2s ease;
+  }
+
+  .whatsapp:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,.1);
+  }
+
+  .small-note {
+    display: block;
+    margin-top: 22px;
+    color: rgba(255,255,255,.78);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  @media (max-width: 720px) {
+    .final-cta-v2 {
+      padding: 86px 0;
+    }
+
+    .actions a {
+      width: 100%;
+    }
+  }
+</style>

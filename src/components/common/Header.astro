@@ -1,0 +1,89 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="brand" aria-label="Automaitech inicio">
+      Automaitech
+    </a>
+
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#solucion">Solución</a>
+      <a href="#incluye">Incluye</a>
+      <a href="#precio">Precio</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <a href="https://calendly.com/automaitech/30min" class="header-cta">
+      Agenda una llamada
+    </a>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(18px);
+  }
+
+  .header-inner {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand {
+    color: #0f172a;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    text-decoration: none;
+  }
+
+  .nav {
+    display: none;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .nav a {
+    color: #475569;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .nav a:hover {
+    color: #0f172a;
+  }
+
+  .header-cta {
+    display: none;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #2563eb;
+    padding-inline: 20px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease;
+  }
+
+  .header-cta:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+  }
+
+  @media (min-width: 768px) {
+    .nav,
+    .header-cta {
+      display: flex;
+    }
+  }
+</style>

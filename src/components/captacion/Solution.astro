@@ -1,0 +1,168 @@
+---
+import SectionTitle from '../common/SectionTitle.astro';
+---
+
+<section id="solucion" class="solution-v2">
+  <div class="container solution-grid">
+    <div>
+      <SectionTitle
+        eyebrow="La solución"
+        title="Un sistema que trabaja en segundo plano mientras tu negocio sigue atendiendo."
+        description="El cliente recibe información clara, encuentra disponibilidad y reserva una cita sin esperar una respuesta manual."
+        align="left"
+      />
+    </div>
+
+    <div class="solution-product">
+      <div class="metric">
+        <span>Tiempo recuperado</span>
+        <strong>+ horas</strong>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item active">
+          <span></span>
+          <div>
+            <h3>Atiende</h3>
+            <p>Responde dudas frecuentes con información clara.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <span></span>
+          <div>
+            <h3>Ordena</h3>
+            <p>Guía al cliente hacia el servicio correcto.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <span></span>
+          <div>
+            <h3>Agenda</h3>
+            <p>Convierte la conversación en una cita confirmada.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .solution-v2 {
+    padding: 120px 0;
+    background: #ffffff;
+  }
+
+  .solution-grid {
+    display: grid;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .solution-product {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 28px;
+    background:
+      radial-gradient(circle at top right, rgba(6, 182, 212, .16), transparent 34%),
+      linear-gradient(135deg, #ffffff, #f8fafc);
+    padding: 30px;
+    box-shadow: 0 28px 70px rgba(15, 23, 42, .09);
+  }
+
+  .metric {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 22px;
+    background: rgba(255,255,255,.86);
+    padding: 22px;
+  }
+
+  .metric span {
+    color: #475569;
+    font-weight: 700;
+  }
+
+  .metric strong {
+    color: #2563eb;
+    font-size: 34px;
+    line-height: 1;
+    letter-spacing: -.04em;
+  }
+
+  .timeline {
+    position: relative;
+    margin-top: 24px;
+    display: grid;
+    gap: 16px;
+  }
+
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 21px;
+    top: 28px;
+    bottom: 28px;
+    width: 2px;
+    background: linear-gradient(#2563eb, #06b6d4);
+  }
+
+  .timeline-item {
+    position: relative;
+    display: flex;
+    gap: 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    background: rgba(255,255,255,.9);
+    padding: 22px;
+  }
+
+  .timeline-item > span {
+    position: relative;
+    z-index: 1;
+    width: 16px;
+    height: 16px;
+    flex: 0 0 auto;
+    margin-top: 5px;
+    border: 4px solid #ffffff;
+    border-radius: 999px;
+    background: #2563eb;
+    box-shadow: 0 0 0 1px #bfdbfe;
+  }
+
+  .timeline-item h3 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -.03em;
+  }
+
+  .timeline-item p {
+    margin: 8px 0 0;
+    color: #475569;
+    line-height: 1.7;
+  }
+
+  @media (min-width: 960px) {
+    .solution-grid {
+      grid-template-columns: .95fr 1.05fr;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .solution-v2 {
+      padding: 86px 0;
+    }
+
+    .metric {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+</style>

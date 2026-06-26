@@ -1,0 +1,176 @@
+---
+import Button from '../ui/Button.astro';
+import Badge from '../ui/Badge.astro';
+---
+
+<section id="precio" class="pricing-v2">
+  <div class="container">
+    <div class="pricing-grid">
+      <div class="copy">
+        <Badge>Precio de lanzamiento</Badge>
+
+        <h2>Implementa tu sistema por USD 150.</h2>
+
+        <p>
+          Este precio aplica durante la etapa inicial mientras documentamos nuevos casos de éxito.
+          Una vez completadas las primeras implementaciones, el precio aumentará.
+        </p>
+      </div>
+
+      <div class="price-card">
+        <small>Sistema de Captación y Agendamiento</small>
+
+        <div class="price">
+          <span>USD</span>
+          <strong>150</strong>
+        </div>
+
+        <ul>
+          <li>Implementación completa</li>
+          <li>Configuración personalizada</li>
+          <li>Capacitación incluida</li>
+          <li>Soporte inicial</li>
+        </ul>
+
+        <div class="actions">
+          <Button href="https://calendly.com/automaitech/30min">
+            Agenda una llamada gratuita
+          </Button>
+
+          <Button href="https://wa.me/573128460832" variant="secondary">
+            Hablar por WhatsApp
+          </Button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pricing-v2 {
+    padding: 120px 0;
+    background: #ffffff;
+  }
+
+  .pricing-grid {
+    display: grid;
+    gap: 56px;
+    align-items: center;
+  }
+
+  h2 {
+    max-width: 620px;
+    margin: 26px 0 0;
+    color: #0f172a;
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -.055em;
+  }
+
+  .copy p {
+    max-width: 580px;
+    margin: 24px 0 0;
+    color: #475569;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .price-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 30px;
+    background:
+      radial-gradient(circle at top right, rgba(249, 115, 22, .14), transparent 30%),
+      radial-gradient(circle at bottom left, rgba(37, 99, 235, .12), transparent 34%),
+      #ffffff;
+    padding: 34px;
+    box-shadow: 0 30px 80px rgba(15, 23, 42, .1);
+  }
+
+  .price-card small {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  .price {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 28px 0;
+  }
+
+  .price span {
+    margin-top: 12px;
+    color: #475569;
+    font-size: 22px;
+    font-weight: 800;
+  }
+
+  .price strong {
+    color: #0f172a;
+    font-size: clamp(4.5rem, 11vw, 6.4rem);
+    line-height: .85;
+    font-weight: 900;
+    letter-spacing: -.08em;
+  }
+
+  ul {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    background: rgba(255,255,255,.88);
+    padding: 15px 16px;
+    color: #0f172a;
+    font-weight: 700;
+  }
+
+  li::before {
+    content: "✓";
+    display: grid;
+    width: 24px;
+    height: 24px;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 999px;
+    background: #dcfce7;
+    color: #16a34a;
+    font-weight: 900;
+  }
+
+  .actions {
+    display: grid;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  @media (min-width: 960px) {
+    .pricing-grid {
+      grid-template-columns: .9fr 1.1fr;
+    }
+
+    .actions {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .pricing-v2 {
+      padding: 86px 0;
+    }
+  }
+</style>

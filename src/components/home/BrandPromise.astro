@@ -1,0 +1,179 @@
+<section class="brand-promise">
+  <div class="container">
+    <div class="heading">
+      <span class="eyebrow">Nuestra filosofía</span>
+
+      <h2>
+        Los negocios no necesitan más herramientas.
+        <br />
+        Necesitan mejores sistemas.
+      </h2>
+
+      <p>
+        La tecnología solo tiene sentido cuando simplifica el trabajo, mejora la
+        experiencia de tus clientes y permite que tu negocio funcione con mayor
+        eficiencia.
+      </p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 6v6l4 2" />
+            <circle cx="12" cy="12" r="9" />
+          </svg>
+        </div>
+
+        <h3>Recupera tiempo</h3>
+
+        <p>
+          Eliminamos tareas repetitivas para que puedas dedicar más tiempo a
+          hacer crecer tu negocio.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 15.5A3.5 3.5 0 1 0 12 8a3.5 3.5 0 0 0 0 7.5Z" />
+            <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6l-.08.08a2 2 0 1 1-3.83 0L10 20a1.7 1.7 0 0 0-1-.6 1.7 1.7 0 0 0-1.88.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-.6-1l-.08-.08a2 2 0 1 1 0-3.83L4 10a1.7 1.7 0 0 0 .6-1 1.7 1.7 0 0 0-.34-1.88l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-.6l.08-.08a2 2 0 1 1 3.83 0L14 4a1.7 1.7 0 0 0 1 .6 1.7 1.7 0 0 0 1.88-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9c.16.37.37.7.6 1l.08.08a2 2 0 1 1 0 3.83L20 14a1.7 1.7 0 0 0-.6 1Z" />
+          </svg>
+        </div>
+
+        <h3>Organiza procesos</h3>
+
+        <p>
+          Diseñamos sistemas claros que reducen errores y hacen que la operación
+          diaria sea mucho más sencilla.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" />
+            <circle cx="10" cy="7" r="4" />
+            <path d="M21 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M17 3.13a4 4 0 0 1 0 7.75" />
+          </svg>
+        </div>
+
+        <h3>Mejora la experiencia</h3>
+
+        <p>
+          Tus clientes reciben respuestas más rápidas, procesos claros y una
+          atención consistente.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .brand-promise {
+    padding: 120px 0;
+    background: #f8fafc;
+  }
+
+  .heading {
+    max-width: 760px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  .heading h2 {
+    margin: 0;
+    color: #0f172a;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1.05;
+    font-weight: 900;
+    letter-spacing: -.05em;
+  }
+
+  .heading p {
+    max-width: 650px;
+    margin: 28px auto 0;
+    color: #475569;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .cards {
+    display: grid;
+    gap: 24px;
+    margin-top: 70px;
+  }
+
+  .card {
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    background: white;
+    padding: 34px;
+    box-shadow: 0 18px 45px rgba(15,23,42,.05);
+    transition: .25s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    border-color: #bfdbfe;
+    box-shadow: 0 25px 55px rgba(15,23,42,.08);
+  }
+
+  .icon {
+    display: flex;
+    width: 58px;
+    height: 58px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+    color: white;
+  }
+
+  .icon svg {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .card h3 {
+    margin: 26px 0 0;
+    color: #0f172a;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -.03em;
+  }
+
+  .card p {
+    margin-top: 16px;
+    color: #475569;
+    line-height: 1.8;
+  }
+
+  @media (min-width: 900px) {
+    .cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .brand-promise {
+      padding: 90px 0;
+    }
+  }
+</style>

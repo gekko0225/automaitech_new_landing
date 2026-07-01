@@ -1,0 +1,185 @@
+---
+const systems = [
+  {
+    status: 'Disponible',
+    title: 'Sistema de Captación y Agendamiento',
+    text: 'Convierte conversaciones en citas confirmadas automáticamente.',
+    href: '/sistema-captacion-agendamiento',
+    active: true,
+  },
+  {
+    status: 'Próximamente',
+    title: 'Sistema de Atención Inteligente',
+    text: 'Responde preguntas frecuentes y mejora la atención diaria.',
+    href: '#',
+  },
+  {
+    status: 'Próximamente',
+    title: 'Sistema de Seguimiento de Clientes',
+    text: 'Da seguimiento a prospectos y clientes sin perder oportunidades.',
+    href: '#',
+  },
+  {
+    status: 'Próximamente',
+    title: 'Sistema de Automatización Operativa',
+    text: 'Simplifica tareas internas y reduce trabajo repetitivo.',
+    href: '#',
+  },
+];
+---
+
+<section id="sistemas" class="systems">
+  <div class="container">
+    <div class="heading">
+      <span>Nuestros sistemas</span>
+      <h2>Soluciones diseñadas para problemas concretos.</h2>
+      <p>
+        Cada sistema está pensado para resolver una parte específica de la
+        operación de un negocio de servicios.
+      </p>
+    </div>
+
+    <div class="grid">
+      {systems.map((system) => (
+        <article class={`system-card ${system.active ? 'active' : ''}`}>
+          <div class="top">
+            <span>{system.status}</span>
+          </div>
+
+          <h3>{system.title}</h3>
+          <p>{system.text}</p>
+
+          <a href={system.href}>
+            {system.active ? 'Ver sistema' : 'Próximamente'}
+          </a>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .systems {
+    padding: 120px 0;
+    background: #ffffff;
+  }
+
+  .heading {
+    max-width: 740px;
+  }
+
+  .heading span {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  .heading h2 {
+    margin: 18px 0 0;
+    color: #0f172a;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1.05;
+    font-weight: 900;
+    letter-spacing: -.05em;
+  }
+
+  .heading p {
+    margin: 24px 0 0;
+    color: #475569;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .grid {
+    display: grid;
+    gap: 22px;
+    margin-top: 64px;
+  }
+
+  .system-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 26px;
+    background: #ffffff;
+    padding: 32px;
+    box-shadow: 0 16px 42px rgba(15, 23, 42, .05);
+    transition: .25s ease;
+  }
+
+  .system-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(37,99,235,.12), transparent 34%);
+    opacity: 0;
+    transition: .25s ease;
+  }
+
+  .system-card:hover {
+    transform: translateY(-6px);
+    border-color: #bfdbfe;
+    box-shadow: 0 24px 58px rgba(15, 23, 42, .08);
+  }
+
+  .system-card:hover::before,
+  .system-card.active::before {
+    opacity: 1;
+  }
+
+  .system-card > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .top span {
+    display: inline-flex;
+    border-radius: 999px;
+    background: #f1f5f9;
+    padding: 8px 12px;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  .system-card.active .top span {
+    background: #eff6ff;
+    color: #2563eb;
+  }
+
+  .system-card h3 {
+    margin: 38px 0 0;
+    color: #0f172a;
+    font-size: 28px;
+    line-height: 1.08;
+    font-weight: 900;
+    letter-spacing: -.04em;
+  }
+
+  .system-card p {
+    margin: 18px 0 0;
+    color: #475569;
+    line-height: 1.75;
+  }
+
+  .system-card a {
+    display: inline-flex;
+    margin-top: 32px;
+    color: #2563eb;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .system-card:not(.active) a {
+    color: #94a3b8;
+    pointer-events: none;
+  }
+
+  @media (min-width: 820px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

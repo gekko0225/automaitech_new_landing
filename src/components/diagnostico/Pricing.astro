@@ -1,0 +1,444 @@
+---
+import { PRICING } from '../../config/pricing';
+import { LINKS } from '../../config/links';
+---
+
+<section id="precio" class="pricing">
+  <div class="container">
+    <div class="heading">
+      <span>Inversión</span>
+
+      <h2>
+        Una pequeña inversión para tomar mejores decisiones.
+      </h2>
+
+      <p>
+        Antes de invertir en automatizaciones o nuevas herramientas,
+        entiende exactamente qué necesita tu negocio y por dónde conviene empezar.
+      </p>
+    </div>
+
+    <div class="pricing-card">
+
+      <div class="top">
+
+        <span class="badge">
+          Diagnóstico Operativo Inteligente
+        </span>
+
+    <div class="price">
+  <small>{PRICING.diagnostic.currency}</small>
+  <strong>{PRICING.diagnostic.amount}</strong>
+</div>
+        <p class="subtitle">
+          Pago único
+        </p>
+
+      </div>
+
+      <div class="features">
+
+        <div class="feature">
+          <span></span>
+          <p>Cuestionario guiado de diagnóstico</p>
+        </div>
+
+        <div class="feature">
+          <span></span>
+          <p>Análisis completo de tu operación</p>
+        </div>
+
+        <div class="feature">
+          <span></span>
+          <p>Informe Operativo Inteligente personalizado</p>
+        </div>
+
+        <div class="feature">
+          <span></span>
+          <p>Plan de acción priorizado</p>
+        </div>
+
+        <div class="feature">
+          <span></span>
+          <p>Sesión para revisar el informe contigo</p>
+        </div>
+
+        <div class="feature highlight">
+          <span></span>
+          <p>{PRICING.diagnostic.discountMessage}</p>
+        </div>
+
+      </div>
+
+      <div class="trust-box">
+  <h3>¿Y si el diagnóstico concluye que no necesitas automatizar?</h3>
+
+  <p>
+    También te lo diremos.
+  </p>
+
+  <p>
+    Nuestro objetivo no es recomendar automatizaciones innecesarias, sino
+    ayudarte a tomar la mejor decisión para tu negocio. En algunos casos,
+    simplificar un proceso o eliminar pasos genera un mayor impacto que
+    incorporar una nueva herramienta.
+  </p>
+</div>
+
+      <div class="actions">
+  <a
+    href={LINKS.calendly.diagnostic}
+    class="primary"
+  >
+    Solicitar diagnóstico
+  </a>
+
+  <a
+    href={LINKS.whatsapp.url}
+    class="secondary"
+  >
+    Resolver una duda
+  </a>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+
+.pricing{
+
+padding:120px 0;
+
+background:#F8FAFC;
+
+}
+
+.heading{
+
+max-width:760px;
+
+margin:auto;
+
+text-align:center;
+
+}
+
+.heading span{
+
+color:#2563EB;
+
+font-size:13px;
+
+font-weight:900;
+
+letter-spacing:.14em;
+
+text-transform:uppercase;
+
+}
+
+.heading h2{
+
+margin:18px 0 0;
+
+font-size:clamp(2.4rem,5vw,4rem);
+
+line-height:1.05;
+
+letter-spacing:-.05em;
+
+color:#0F172A;
+
+}
+
+.heading p{
+
+max-width:650px;
+
+margin:24px auto 0;
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#475569;
+
+}
+
+.pricing-card{
+
+max-width:760px;
+
+margin:70px auto 0;
+
+padding:42px;
+
+border-radius:32px;
+
+background:white;
+
+border:1px solid #E2E8F0;
+
+box-shadow:0 30px 80px rgba(15,23,42,.08);
+
+}
+
+.top{
+
+text-align:center;
+
+}
+
+.badge{
+
+display:inline-flex;
+
+padding:10px 16px;
+
+border-radius:999px;
+
+background:#EFF6FF;
+
+border:1px solid #BFDBFE;
+
+color:#2563EB;
+
+font-size:14px;
+
+font-weight:800;
+
+}
+
+.price{
+
+display:flex;
+
+justify-content:center;
+
+align-items:flex-end;
+
+gap:8px;
+
+margin-top:28px;
+
+}
+
+.price small{
+
+font-size:24px;
+
+font-weight:700;
+
+color:#2563EB;
+
+}
+
+.price strong{
+
+font-size:78px;
+
+line-height:1;
+
+font-weight:900;
+
+letter-spacing:-.06em;
+
+color:#0F172A;
+
+}
+
+.subtitle{
+
+margin-top:8px;
+
+color:#64748B;
+
+}
+
+.features{
+
+display:grid;
+
+gap:16px;
+
+margin-top:42px;
+
+}
+
+.feature{
+
+display:flex;
+
+align-items:flex-start;
+
+gap:16px;
+
+padding:18px;
+
+border:1px solid #E2E8F0;
+
+border-radius:18px;
+
+}
+
+.feature span{
+
+width:12px;
+
+height:12px;
+
+margin-top:8px;
+
+border-radius:999px;
+
+background:linear-gradient(135deg,#2563EB,#06B6D4);
+
+flex-shrink:0;
+
+}
+
+.feature p{
+
+margin:0;
+
+line-height:1.7;
+
+color:#475569;
+
+}
+
+.highlight{
+
+background:#EFF6FF;
+
+border-color:#BFDBFE;
+
+}
+
+.actions{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:14px;
+
+margin-top:40px;
+
+}
+
+.primary,
+
+.secondary{
+
+display:inline-flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:54px;
+
+padding:0 28px;
+
+border-radius:14px;
+
+font-weight:700;
+
+text-decoration:none;
+
+transition:.25s;
+
+}
+
+.primary{
+
+background:#2563EB;
+
+color:white;
+
+}
+
+.primary:hover{
+
+background:#1D4ED8;
+
+transform:translateY(-2px);
+
+}
+
+.secondary{
+
+border:1px solid #CBD5E1;
+
+color:#0F172A;
+
+}
+
+.secondary:hover{
+
+background:#F8FAFC;
+
+}
+
+@media(max-width:768px){
+
+.pricing{
+
+padding:90px 0;
+
+}
+
+.pricing-card{
+
+padding:28px;
+
+}
+
+.actions a{
+
+width:100%;
+
+}
+
+.price strong{
+
+font-size:60px;
+
+}
+
+}
+
+.trust-box {
+  margin-top: 36px;
+  padding: 28px;
+  border: 1px solid #bfdbfe;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #eff6ff, #f8fbff);
+}
+
+.trust-box h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: -.03em;
+}
+
+.trust-box p {
+  margin-top: 14px;
+  color: #475569;
+  line-height: 1.8;
+}
+
+.trust-box p:first-of-type {
+  color: #2563eb;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+</style>

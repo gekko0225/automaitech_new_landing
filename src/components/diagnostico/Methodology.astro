@@ -1,0 +1,140 @@
+---
+const items = [
+  {
+    letter: 'O',
+    title: 'Observamos',
+    text: 'Entendemos cómo funciona tu operación actual, qué tareas se repiten y dónde aparece la fricción.',
+  },
+  {
+    letter: 'P',
+    title: 'Priorizamos',
+    text: 'Ordenamos las oportunidades por impacto, facilidad de implementación y tiempo que podrías recuperar.',
+  },
+  {
+    letter: 'C',
+    title: 'Construimos',
+    text: 'Definimos una ruta clara para simplificar, mejorar o automatizar los procesos adecuados.',
+  },
+];
+---
+
+<section class="methodology">
+  <div class="container">
+    <div class="heading">
+      <span>Metodología OPC</span>
+      <h2>No empezamos por la herramienta. Empezamos por entender tu operación.</h2>
+      <p>
+        Nuestra metodología ayuda a decidir qué conviene eliminar, simplificar o
+        automatizar antes de invertir en nuevas soluciones.
+      </p>
+    </div>
+
+    <div class="grid">
+      {items.map((item) => (
+        <article class="item">
+          <div class="letter">{item.letter}</div>
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .methodology {
+    padding: 120px 0;
+    background: #ffffff;
+  }
+
+  .heading {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .heading span {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  .heading h2 {
+    margin: 18px 0 0;
+    color: #0f172a;
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    line-height: 1.05;
+    font-weight: 900;
+    letter-spacing: -.055em;
+  }
+
+  .heading p {
+    max-width: 660px;
+    margin: 24px auto 0;
+    color: #475569;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .grid {
+    display: grid;
+    gap: 22px;
+    margin-top: 64px;
+  }
+
+  .item {
+    border: 1px solid #e2e8f0;
+    border-radius: 26px;
+    background:
+      radial-gradient(circle at top right, rgba(37,99,235,.1), transparent 34%),
+      #ffffff;
+    padding: 34px;
+    box-shadow: 0 16px 42px rgba(15,23,42,.05);
+    transition: .25s ease;
+  }
+
+  .item:hover {
+    transform: translateY(-6px);
+    border-color: #bfdbfe;
+  }
+
+  .letter {
+    display: grid;
+    width: 64px;
+    height: 64px;
+    place-items: center;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+    color: white;
+    font-size: 26px;
+    font-weight: 900;
+  }
+
+  .item h3 {
+    margin: 30px 0 0;
+    color: #0f172a;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: -.04em;
+  }
+
+  .item p {
+    margin-top: 14px;
+    color: #475569;
+    line-height: 1.75;
+  }
+
+  @media (min-width: 900px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 720px) {
+    .methodology {
+      padding: 90px 0;
+    }
+  }
+</style>

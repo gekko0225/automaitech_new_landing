@@ -1,0 +1,73 @@
+<section class="philosophy">
+  <div class="container">
+    <div class="grid">
+      <article>
+        <span>No vendemos software.</span>
+        <h2>Diseñamos sistemas.</h2>
+      </article>
+
+      <article>
+        <span>No automatizamos todo.</span>
+        <h2>Solo lo que genera valor.</h2>
+      </article>
+
+      <article>
+        <span>Cada negocio trabaja diferente.</span>
+        <h2>Cada sistema también.</h2>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .philosophy {
+    padding: 120px 0;
+    background: #ffffff;
+  }
+
+  .grid {
+    display: grid;
+    gap: 24px;
+  }
+
+  article {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 28px;
+    background:
+      radial-gradient(circle at top right, rgba(37,99,235,.12), transparent 34%),
+      #ffffff;
+    padding: 42px;
+    box-shadow: 0 20px 55px rgba(15,23,42,.06);
+  }
+
+  span {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 28px 0 0;
+    color: #0f172a;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -.06em;
+  }
+
+  @media (min-width: 900px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .philosophy {
+      padding: 90px 0;
+    }
+  }
+</style>

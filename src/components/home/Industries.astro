@@ -1,0 +1,95 @@
+---
+const industries = [
+  'Clínicas',
+  'Odontólogos',
+  'Estéticas',
+  'Spas',
+  'Veterinarias',
+  'Abogados',
+  'Entrenadores',
+  'Consultorios',
+  'Fisioterapeutas',
+  'Inmobiliarias',
+];
+---
+
+<section id="sectores" class="industries">
+  <div class="container">
+    <div class="heading">
+      <span>Sectores</span>
+      <h2>Diseñado para negocios que trabajan con atención, citas y procesos.</h2>
+      <p>
+        Automaitech se adapta especialmente bien a negocios de servicios que
+        necesitan responder mejor, organizar su operación y recuperar tiempo.
+      </p>
+    </div>
+
+    <div class="tags">
+      {industries.map((industry) => (
+        <span>{industry}</span>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .industries {
+    padding: 120px 0;
+    background: #f8fafc;
+  }
+
+  .heading {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .heading > span {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 18px 0 0;
+    color: #0f172a;
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    line-height: 1.05;
+    font-weight: 900;
+    letter-spacing: -.05em;
+  }
+
+  p {
+    max-width: 660px;
+    margin: 24px auto 0;
+    color: #475569;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 60px;
+  }
+
+  .tags span {
+    border: 1px solid #e2e8f0;
+    border-radius: 999px;
+    background: white;
+    padding: 14px 20px;
+    color: #0f172a;
+    font-weight: 800;
+    box-shadow: 0 10px 28px rgba(15,23,42,.04);
+  }
+
+  @media (max-width: 768px) {
+    .industries {
+      padding: 90px 0;
+    }
+  }
+</style>

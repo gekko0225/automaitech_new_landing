@@ -1,0 +1,265 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Completa el cuestionario",
+    text: "Responde un cuestionario guiado de aproximadamente 15 minutos sobre cómo funciona actualmente tu negocio.",
+  },
+  {
+    number: "02",
+    title: "Analizamos tu operación",
+    text: "Estudiamos la información utilizando nuestra metodología para identificar cuellos de botella y oportunidades de mejora.",
+  },
+  {
+    number: "03",
+    title: "Creamos tu informe",
+    text: "Elaboramos un Informe Operativo Inteligente completamente personalizado con nuestras recomendaciones.",
+  },
+  {
+    number: "04",
+    title: "Revisamos el plan contigo",
+    text: "Agendamos una sesión para explicar el informe y definir cuáles deberían ser los siguientes pasos.",
+  },
+];
+---
+
+<section class="process">
+  <div class="container">
+
+    <div class="heading">
+
+      <span>Cómo funciona</span>
+
+      <h2>
+        Un proceso simple para tomar mejores decisiones.
+      </h2>
+
+      <p>
+        Antes de recomendar cualquier sistema, primero entendemos cómo trabaja
+        tu negocio y dónde existe la mayor oportunidad de mejora.
+      </p>
+
+    </div>
+
+    <div class="timeline">
+
+      {
+        steps.map((step) => (
+
+          <article class="step">
+
+            <div class="number">
+              {step.number}
+            </div>
+
+            <h3>{step.title}</h3>
+
+            <p>{step.text}</p>
+
+          </article>
+
+        ))
+      }
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+
+.process{
+
+padding:120px 0;
+
+background:white;
+
+}
+
+.heading{
+
+max-width:760px;
+
+margin:auto;
+
+text-align:center;
+
+}
+
+.heading span{
+
+display:inline-block;
+
+color:#2563EB;
+
+font-size:13px;
+
+font-weight:900;
+
+letter-spacing:.14em;
+
+text-transform:uppercase;
+
+}
+
+.heading h2{
+
+margin:18px 0 0;
+
+font-size:clamp(2.4rem,5vw,4rem);
+
+line-height:1.05;
+
+letter-spacing:-.05em;
+
+color:#0F172A;
+
+}
+
+.heading p{
+
+max-width:650px;
+
+margin:24px auto 0;
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#475569;
+
+}
+
+.timeline{
+
+display:grid;
+
+gap:24px;
+
+margin-top:70px;
+
+}
+
+.step{
+
+position:relative;
+
+padding:34px;
+
+border-radius:24px;
+
+background:white;
+
+border:1px solid #E2E8F0;
+
+box-shadow:0 14px 38px rgba(15,23,42,.05);
+
+transition:.25s;
+
+}
+
+.step:hover{
+
+transform:translateY(-6px);
+
+border-color:#BFDBFE;
+
+}
+
+.number{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+width:56px;
+
+height:56px;
+
+border-radius:18px;
+
+background:linear-gradient(135deg,#2563EB,#06B6D4);
+
+color:white;
+
+font-weight:800;
+
+letter-spacing:.08em;
+
+}
+
+.step h3{
+
+margin:28px 0 0;
+
+font-size:24px;
+
+font-weight:800;
+
+letter-spacing:-.03em;
+
+color:#0F172A;
+
+}
+
+.step p{
+
+margin-top:16px;
+
+line-height:1.8;
+
+color:#475569;
+
+}
+
+@media(min-width:960px){
+
+.timeline{
+
+grid-template-columns:repeat(4,1fr);
+
+position:relative;
+
+}
+
+.timeline::before{
+
+content:"";
+
+position:absolute;
+
+left:8%;
+
+right:8%;
+
+top:62px;
+
+height:2px;
+
+background:linear-gradient(90deg,#2563EB,#06B6D4);
+
+opacity:.25;
+
+}
+
+.step{
+
+z-index:2;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.process{
+
+padding:90px 0;
+
+}
+
+}
+
+</style>

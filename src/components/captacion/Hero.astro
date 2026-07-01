@@ -1,6 +1,7 @@
 ---
 import Button from '../ui/Button.astro';
 import Badge from '../ui/Badge.astro';
+import { LINKS } from '../../config/links';
 ---
 
 <section class="hero-v2">
@@ -19,12 +20,13 @@ import Badge from '../ui/Badge.astro';
       </p>
 
       <div class="actions">
-        <Button href="https://calendly.com/automaitech/30min">
-          Agenda una llamada
-        </Button>
+        <a href={LINKS.calendly.captacion} class="btn-primary">
+  Agenda una llamada
+</a>
 
-        <Button href="https://wa.me/573128460832" variant="secondary">
-          Hablar por WhatsApp
+<a href={LINKS.whatsapp.url} class="btn-secondary">
+  Hablar por WhatsApp
+</a>
         </Button>
       </div>
 

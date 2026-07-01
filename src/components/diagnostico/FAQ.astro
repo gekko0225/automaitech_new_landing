@@ -1,0 +1,152 @@
+---
+const faqs = [
+  [
+    '¿Necesito conocimientos técnicos?',
+    'No. El diagnóstico está diseñado para entender cómo trabaja tu negocio, no para hablar de herramientas o configuraciones técnicas.',
+  ],
+  [
+    '¿Qué pasa si mi negocio no necesita automatización?',
+    'Te lo diremos claramente. En algunos casos, simplificar o eliminar pasos genera más valor que automatizar.',
+  ],
+  [
+    '¿Cuánto tarda el proceso?',
+    'Primero completas un cuestionario de aproximadamente 15 minutos. Luego analizamos la información y coordinamos la entrega del informe.',
+  ],
+  [
+    '¿Qué recibo al finalizar?',
+    'Recibes un Informe Operativo Inteligente con mapa del proceso, cuellos de botella, oportunidades de mejora y un plan de acción priorizado.',
+  ],
+  [
+    '¿El precio se descuenta de una implementación?',
+    'Sí. Si decides implementar uno de nuestros sistemas, descontamos el valor completo del diagnóstico.',
+  ],
+  [
+    '¿Puedo implementar las recomendaciones por mi cuenta?',
+    'Sí. El informe busca darte claridad. Puedes implementarlo internamente o solicitar ayuda a Automaitech.',
+  ],
+  [
+    '¿Sirve para negocios pequeños?',
+    'Sí. Es ideal para negocios de servicios, profesionales independientes y equipos pequeños que quieren trabajar mejor antes de invertir en nuevas herramientas.',
+  ],
+  [
+    '¿La llamada está incluida?',
+    'Sí. Incluye una sesión para revisar el informe y resolver dudas sobre los siguientes pasos.',
+  ],
+];
+---
+
+<section class="faq">
+  <div class="container">
+    <div class="heading">
+      <span>Preguntas frecuentes</span>
+      <h2>Antes de solicitar tu diagnóstico.</h2>
+    </div>
+
+    <div class="faq-list">
+      {faqs.map(([question, answer]) => (
+        <details>
+          <summary>
+            <span>{question}</span>
+            <strong>+</strong>
+          </summary>
+          <p>{answer}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq {
+    padding: 120px 0;
+    background: #ffffff;
+  }
+
+  .heading {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .heading > span {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 18px 0 0;
+    color: #0f172a;
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    line-height: 1.05;
+    font-weight: 900;
+    letter-spacing: -.055em;
+  }
+
+  .faq-list {
+    display: grid;
+    gap: 14px;
+    max-width: 860px;
+    margin: 64px auto 0;
+  }
+
+  details {
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    background: #ffffff;
+    padding: 22px 24px;
+    box-shadow: 0 12px 34px rgba(15, 23, 42, .045);
+  }
+
+  summary {
+    display: flex;
+    cursor: pointer;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary span {
+    color: #0f172a;
+    font-weight: 800;
+  }
+
+  summary strong {
+    display: grid;
+    width: 30px;
+    height: 30px;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 22px;
+    transition: .2s ease;
+  }
+
+  details[open] summary strong {
+    transform: rotate(45deg);
+    background: #2563eb;
+    color: white;
+  }
+
+  details p {
+    margin: 16px 0 0;
+    max-width: 720px;
+    color: #475569;
+    line-height: 1.75;
+  }
+
+  @media (max-width: 720px) {
+    .faq {
+      padding: 90px 0;
+    }
+  }
+</style>

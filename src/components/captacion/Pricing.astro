@@ -1,6 +1,8 @@
 ---
 import Button from '../ui/Button.astro';
 import Badge from '../ui/Badge.astro';
+import { PRICING } from '../../config/pricing';
+import { LINKS } from '../../config/links';
 ---
 
 <section id="precio" class="pricing-v2">
@@ -9,7 +11,7 @@ import Badge from '../ui/Badge.astro';
       <div class="copy">
         <Badge>Precio de lanzamiento</Badge>
 
-        <h2>Implementa tu sistema por USD 150.</h2>
+        <h2>Implementa tu sistema por COP 799.000.</h2>
 
         <p>
           Este precio aplica durante la etapa inicial mientras documentamos nuevos casos de éxito.
@@ -21,25 +23,32 @@ import Badge from '../ui/Badge.astro';
         <small>Sistema de Captación y Agendamiento</small>
 
         <div class="price">
-          <span>USD</span>
-          <strong>150</strong>
+        <small>{PRICING.captacion.currency}</small>
+<strong>{PRICING.captacion.amount}</strong>
         </div>
 
         <ul>
-          <li>Implementación completa</li>
-          <li>Configuración personalizada</li>
-          <li>Capacitación incluida</li>
-          <li>Soporte inicial</li>
+            <li>Implementación completa</li>
+  <li>Configuración personalizada</li>
+  <li>Capacitación incluida</li>
+  <li>Soporte inicial</li>
+  <li>Descuento del diagnóstico aplicado si ya lo realizaste</li>
         </ul>
 
-        <div class="actions">
-          <Button href="https://calendly.com/automaitech/30min">
-            Agenda una llamada gratuita
-          </Button>
+        <div class="discount-note">
+  <strong>Diagnóstico descontable</strong>
+  <p>
+  {PRICING.captacion.discountMessage}
+</p>
+</div>
 
-          <Button href="https://wa.me/573128460832" variant="secondary">
-            Hablar por WhatsApp
-          </Button>
+    <a href={LINKS.calendly.captacion} class="btn-primary">
+  Agenda una llamada gratuita
+</a>
+
+          <a href={LINKS.whatsapp.url} class="btn-secondary">
+  Hablar por WhatsApp
+</a>
         </div>
       </div>
     </div>
@@ -173,4 +182,24 @@ import Badge from '../ui/Badge.astro';
       padding: 86px 0;
     }
   }
+
+  .discount-note {
+  margin-top: 22px;
+  border: 1px solid #bfdbfe;
+  border-radius: 18px;
+  background: #eff6ff;
+  padding: 20px;
+}
+
+.discount-note strong {
+  color: #2563eb;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.discount-note p {
+  margin: 8px 0 0;
+  color: #475569;
+  line-height: 1.7;
+}
 </style>

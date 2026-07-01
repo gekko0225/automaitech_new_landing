@@ -1,0 +1,231 @@
+---
+import { PRICING } from '../../config/pricing';
+---
+
+<section class="diagnostic-hero">
+  <div class="hero-bg"></div>
+
+  <div class="container hero-grid">
+    <div class="copy reveal">
+      <span class="badge">Diagnóstico Operativo Inteligente</span>
+
+      <h1>Descubre qué está frenando la eficiencia de tu negocio.</h1>
+
+      <p>
+        Analizamos cómo funciona tu operación y te entregamos un plan claro para
+        simplificar procesos, eliminar tareas innecesarias y automatizar solo
+        aquello que realmente genera valor.
+      </p>
+
+      <div class="actions">
+        <a href="#precio" class="btn-primary">
+          Solicitar diagnóstico
+        </a>
+
+        <a href="#informe" class="btn-secondary">
+          Ver qué incluye
+        </a>
+      </div>
+
+      <div class="price-note">
+        <strong>{PRICING.diagnostic.display}</strong>
+        <span>Se descuenta si implementas uno de nuestros sistemas.</span>
+      </div>
+    </div>
+
+    <div class="report-card reveal">
+      <div class="report-header">
+        <small>Informe Operativo Inteligente</small>
+        <strong>Vista previa</strong>
+      </div>
+
+      <div class="report-list">
+        <div>
+          <span></span>
+          <p>Mapa del flujo de trabajo</p>
+        </div>
+
+        <div>
+          <span></span>
+          <p>Cuello de botella principal</p>
+        </div>
+
+        <div>
+          <span></span>
+          <p>Tareas repetitivas detectadas</p>
+        </div>
+
+        <div>
+          <span></span>
+          <p>Oportunidades de mejora</p>
+        </div>
+
+        <div>
+          <span></span>
+          <p>Plan de implementación por prioridades</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .diagnostic-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 96px 0 120px;
+    background: #ffffff;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 78% 20%, rgba(37,99,235,.15), transparent 28%),
+      radial-gradient(circle at 90% 64%, rgba(6,182,212,.13), transparent 24%),
+      linear-gradient(rgba(15,23,42,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(15,23,42,.035) 1px, transparent 1px);
+    background-size: auto, auto, 48px 48px, 48px 48px;
+    pointer-events: none;
+  }
+
+  .hero-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 72px;
+    align-items: center;
+  }
+
+  .copy {
+    max-width: 720px;
+  }
+
+  .badge {
+    display: inline-flex;
+    border: 1px solid #bfdbfe;
+    border-radius: 999px;
+    background: #eff6ff;
+    padding: 10px 14px;
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  h1 {
+    margin: 26px 0 0;
+    color: #0f172a;
+    font-size: clamp(2.8rem, 6vw, 4.7rem);
+    line-height: .98;
+    font-weight: 900;
+    letter-spacing: -.07em;
+  }
+
+  p {
+    max-width: 650px;
+    margin: 28px 0 0;
+    color: #475569;
+    font-size: 19px;
+    line-height: 1.85;
+  }
+
+  .actions {
+    margin-top: 38px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .price-note {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    color: #64748b;
+  }
+
+  .price-note strong {
+    color: #2563eb;
+    font-size: 24px;
+  }
+
+  .report-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 30px;
+    background:
+      radial-gradient(circle at top right, rgba(37,99,235,.12), transparent 34%),
+      #ffffff;
+    padding: 30px;
+    box-shadow: 0 30px 80px rgba(15,23,42,.12);
+  }
+
+  .report-header {
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 22px;
+  }
+
+  .report-header small {
+    display: block;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  .report-header strong {
+    display: block;
+    margin-top: 8px;
+    color: #0f172a;
+    font-size: 28px;
+    letter-spacing: -.04em;
+  }
+
+  .report-list {
+    display: grid;
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  .report-list div {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    background: white;
+    padding: 16px;
+  }
+
+  .report-list span {
+    width: 12px;
+    height: 12px;
+    flex: 0 0 auto;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+  }
+
+  .report-list p {
+    margin: 0;
+    color: #0f172a;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-grid {
+      grid-template-columns: 1.05fr .95fr;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .diagnostic-hero {
+      padding: 70px 0 90px;
+    }
+
+    .actions a {
+      width: 100%;
+    }
+  }
+</style>

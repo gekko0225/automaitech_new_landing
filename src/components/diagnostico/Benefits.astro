@@ -1,0 +1,152 @@
+---
+const benefits = [
+  {
+    title: 'Mapa de procesos',
+    text: 'Visualizamos cómo funciona actualmente tu operación para entender dónde se pierde tiempo.',
+  },
+  {
+    title: 'Cuellos de botella',
+    text: 'Identificamos el punto del flujo que más fricción genera en tu negocio.',
+  },
+  {
+    title: 'Oportunidades de mejora',
+    text: 'Detectamos qué conviene eliminar, simplificar o automatizar.',
+  },
+  {
+    title: 'Plan de acción',
+    text: 'Recibes una ruta clara con prioridades para empezar por lo que más impacto tiene.',
+  },
+];
+---
+
+<section class="benefits">
+  <div class="container">
+    <div class="heading">
+      <span>Qué obtendrás</span>
+      <h2>Claridad antes de invertir en nuevas herramientas.</h2>
+      <p>
+        El diagnóstico te ayuda a decidir con criterio qué procesos vale la pena mejorar
+        y cuáles no necesitan automatización.
+      </p>
+    </div>
+
+    <div class="grid">
+      {benefits.map((item) => (
+        <article class="card">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .benefits {
+    padding: 120px 0;
+    background: #f8fafc;
+  }
+
+  .heading {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .heading span {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  .heading h2 {
+    margin: 18px 0 0;
+    color: #0f172a;
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    line-height: 1.05;
+    font-weight: 900;
+    letter-spacing: -.05em;
+  }
+
+  .heading p {
+    max-width: 650px;
+    margin: 24px auto 0;
+    color: #475569;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .grid {
+    display: grid;
+    gap: 22px;
+    margin-top: 64px;
+  }
+
+  .card {
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    background: white;
+    padding: 32px;
+    box-shadow: 0 16px 42px rgba(15,23,42,.05);
+    transition: .25s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    border-color: #bfdbfe;
+  }
+
+  .icon {
+    display: grid;
+    width: 54px;
+    height: 54px;
+    place-items: center;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
+    color: white;
+  }
+
+  .icon svg {
+    width: 26px;
+    height: 26px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .card h3 {
+    margin: 28px 0 0;
+    color: #0f172a;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: -.03em;
+  }
+
+  .card p {
+    margin-top: 14px;
+    color: #475569;
+    line-height: 1.75;
+  }
+
+  @media (min-width: 900px) {
+    .grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media (max-width: 720px) {
+    .benefits {
+      padding: 90px 0;
+    }
+  }
+</style>

@@ -1,0 +1,171 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Diagnóstico",
+    text: "Analizamos cómo funciona actualmente tu negocio para identificar oportunidades de mejora.",
+  },
+  {
+    number: "02",
+    title: "Diseño",
+    text: "Definimos un sistema adaptado a tus procesos, sin añadir complejidad innecesaria.",
+  },
+  {
+    number: "03",
+    title: "Implementación",
+    text: "Configuramos el sistema y lo dejamos listo para que comience a trabajar.",
+  },
+  {
+    number: "04",
+    title: "Optimización",
+    text: "Acompañamos la evolución del sistema para mantenerlo alineado con tu negocio.",
+  },
+];
+---
+
+<section id="proceso" class="process">
+  <div class="container">
+    <div class="heading">
+      <span>Cómo trabajamos</span>
+
+      <h2>
+        Un proceso claro desde el primer diagnóstico hasta la implementación.
+      </h2>
+
+      <p>
+        Nuestro objetivo no es instalar herramientas, sino construir un sistema
+        que realmente ayude a tu negocio a trabajar mejor.
+      </p>
+    </div>
+
+    <div class="timeline">
+      {steps.map((step) => (
+        <article class="step">
+          <span class="number">{step.number}</span>
+
+          <h3>{step.title}</h3>
+
+          <p>{step.text}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .process {
+    padding: 120px 0;
+    background:
+      radial-gradient(circle at 15% 15%, rgba(37,99,235,.08), transparent 28%),
+      #f8fafc;
+  }
+
+  .heading {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .heading span {
+    display: inline-block;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  .heading h2 {
+    margin: 18px 0 0;
+    color: #0f172a;
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    line-height: 1.08;
+    font-weight: 900;
+    letter-spacing: -.05em;
+  }
+
+  .heading p {
+    max-width: 650px;
+    margin: 24px auto 0;
+    color: #475569;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .timeline {
+    position: relative;
+    display: grid;
+    gap: 22px;
+    margin-top: 70px;
+  }
+
+  .step {
+    position: relative;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    background: rgba(255,255,255,.92);
+    padding: 30px;
+    box-shadow: 0 14px 38px rgba(15,23,42,.05);
+    transition: .25s ease;
+  }
+
+  .step:hover {
+    transform: translateY(-5px);
+    border-color: #bfdbfe;
+  }
+
+  .number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+    background: linear-gradient(135deg,#2563eb,#06b6d4);
+    color: white;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: .08em;
+  }
+
+  .step h3 {
+    margin: 26px 0 0;
+    color: #0f172a;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -.03em;
+  }
+
+  .step p {
+    margin-top: 14px;
+    color: #475569;
+    line-height: 1.75;
+  }
+
+  @media (min-width: 960px) {
+    .timeline {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 8%;
+      right: 8%;
+      top: 56px;
+      height: 2px;
+      background: linear-gradient(90deg,#2563eb,#06b6d4);
+      opacity: .3;
+    }
+
+    .step {
+      z-index: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .process {
+      padding: 90px 0;
+    }
+  }
+</style>

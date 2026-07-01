@@ -21,10 +21,10 @@ export const LINKS = {
   diagnostic: "https://mpago.li/2ktqGs4",
 },
 
-  forms: {
-    diagnostic: "https://forms.google.com/TU-FORMULARIO",
+    forms: {
+    diagnostic: "https://forms.gle/jWyhPBv2iUGTQQCCA",
   },
-
+  
   social: {
     linkedin: "",
     instagram: "",

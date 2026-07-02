@@ -1,5 +1,4 @@
 ---
-import Button from '../ui/Button.astro';
 import Badge from '../ui/Badge.astro';
 import { LINKS } from '../../config/links';
 ---
@@ -20,15 +19,15 @@ import { LINKS } from '../../config/links';
         a recuperar tiempo, organizar tu agenda y convertir más conversaciones en citas.
       </p>
 
-      <div class="actions">
-        <Button href={LINKS.calendly.captacion} variant="light">
-          Agenda una llamada gratuita
-        </Button>
+    <div class="actions">
+  <a href={LINKS.calendly.captacion} class="final-btn final-btn-light">
+    Agenda una llamada gratuita
+  </a>
 
-        <a href="{LINKS.whatsapp.url}" class="whatsapp">
-          WhatsApp
-        </a>
-      </div>
+  <a href={LINKS.whatsapp.url} class="final-btn final-btn-outline">
+    WhatsApp
+  </a>
+</div>
 
       <span class="small-note">
         Sin compromiso. En menos de 30 minutos.
@@ -97,22 +96,34 @@ import { LINKS } from '../../config/links';
     flex-wrap: wrap;
   }
 
-  .whatsapp {
+  .final-btn {
     display: inline-flex;
     height: 52px;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(255,255,255,.45);
     border-radius: 14px;
     padding-inline: 28px;
-    color: white;
     font-weight: 800;
     text-decoration: none;
     transition: .2s ease;
   }
 
-  .whatsapp:hover {
+  .final-btn-light {
+    background: #ffffff;
+    color: #2563eb;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, .14);
+  }
+
+  .final-btn-outline {
+    border: 1px solid rgba(255,255,255,.45);
+    color: #ffffff;
+  }
+
+  .final-btn:hover {
     transform: translateY(-2px);
+  }
+
+  .final-btn-outline:hover {
     background: rgba(255,255,255,.1);
   }
 

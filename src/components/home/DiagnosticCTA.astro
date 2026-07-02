@@ -1,3 +1,7 @@
+---
+import { LINKS } from '../../config/links';
+---
+
 <section class="diagnostic-cta">
   <div class="container">
     <div class="cta-box">
@@ -14,14 +18,14 @@
       </p>
 
       <div class="actions">
-        <a href="/diagnostico-operativo" class="primary">
-          Conocer el diagnóstico
-        </a>
+  <a href={LINKS.website.diagnostic} class="primary">
+    Conocer el diagnóstico
+  </a>
 
-        <a href="calendly.com/automaitech" class="secondary">
-          Agenda una llamada
-        </a>
-      </div>
+  <a href={LINKS.whatsapp.url} class="secondary">
+    Resolver una duda
+  </a>
+</div>
     </div>
   </div>
 </section>

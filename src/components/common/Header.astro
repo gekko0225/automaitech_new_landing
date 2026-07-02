@@ -1,23 +1,23 @@
 ---
-const whatsappUrl = 'https://wa.me/573128460832';
+import { LINKS } from '../../config/links';
 ---
 
 <header class="site-header">
   <div class="container header-inner">
-    <a href="/" class="brand" aria-label="Automaitech inicio">
+    <a href={LINKS.website.home} class="brand" aria-label="Automaitech inicio">
       <span class="brand-mark"></span>
       Automaitech
     </a>
 
     <nav class="nav" aria-label="Navegación principal">
-      <a href="/">Inicio</a>
+      <a href={LINKS.website.home}>Inicio</a>
       <a href="/#sistemas">Sistemas</a>
       <a href="/#proceso">Cómo trabajamos</a>
       <a href="/#sectores">Sectores</a>
-      <a href={whatsappUrl}>Contacto</a>
+      <a href={LINKS.whatsapp.url}>Contacto</a>
     </nav>
 
-    <a href="/diagnostico-operativo" class="header-cta">
+    <a href={LINKS.website.diagnostic} class="header-cta">
       Solicitar diagnóstico
     </a>
   </div>

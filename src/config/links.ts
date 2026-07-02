@@ -22,7 +22,7 @@ export const LINKS = {
 },
 
     forms: {
-    diagnostic: "https://forms.gle/jWyhPBv2iUGTQQCCA",
+    diagnostic: "https://forms.gle/61HMkeWi24yz9qkm6",
   },
   
   social: {

@@ -1,12 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
 import Header from '../components/common/Header.astro';
 import Footer from '../components/common/Footer.astro';
-
 import HomeHero from '../components/home/HomeHero.astro';
-import BrandPromise from '../components/home/BrandPromise.astro';
+import Problems from '../components/home/Problems.astro';
 import Systems from '../components/home/Systems.astro';
+import BrandPromise from '../components/home/BrandPromise.astro';
 import Process from '../components/home/Process.astro';
 import Philosophy from '../components/home/Philosophy.astro';
 import Industries from '../components/home/Industries.astro';
@@ -14,20 +13,19 @@ import DiagnosticCTA from '../components/home/DiagnosticCTA.astro';
 ---
 
 <BaseLayout
-  title="Automaitech | Sistemas inteligentes para negocios de servicios"
-  description="Diseñamos e implementamos sistemas inteligentes que automatizan tareas repetitivas, organizan procesos y ayudan a negocios de servicios a recuperar tiempo y captar más clientes."
+  title="Automaitech | Captación, filtrado y seguimiento para negocios de servicios"
+  description="Diseñamos sistemas que captan, califican y dan seguimiento a tus prospectos para convertir más consultas en citas y oportunidades comerciales."
 >
   <Header />
-
   <main>
     <HomeHero />
-    <BrandPromise />
+    <Problems />
     <Systems />
+    <BrandPromise />
     <Process />
     <Philosophy />
     <Industries />
     <DiagnosticCTA />
   </main>
-
   <Footer />
 </BaseLayout>

@@ -13,8 +13,8 @@ export const LINKS = {
   },
 
   whatsapp: {
-    number: "573189862259",
-    url: "https://wa.me/573189862259",
+    number: "573128460832",
+    url: "https://wa.me/573128460832",
   },
 
   payment: {

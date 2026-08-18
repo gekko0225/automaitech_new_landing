@@ -6,135 +6,29 @@ import { LINKS } from '../../config/links';
   <div class="container">
     <div class="cta-box">
       <div class="bg"></div>
-
-      <span class="badge">Diagnóstico Operativo Inteligente</span>
-
-      <h2>¿No sabes qué necesita tu negocio?</h2>
-
-      <p>
-        Analizamos cómo funciona tu operación y te mostramos qué procesos
-        conviene simplificar, mejorar o automatizar antes de invertir en nuevas
-        herramientas.
-      </p>
-
+      <span class="badge">Revisión inicial Automaitech</span>
+      <h2>Descubre dónde se están perdiendo tus próximas oportunidades.</h2>
+      <p>Revisamos cómo atraes, atiendes, filtras y das seguimiento a tus prospectos para identificar el principal cuello de botella de tu proceso comercial.</p>
       <div class="actions">
-  <a href={LINKS.website.diagnostic} class="primary">
-    Conocer el diagnóstico
-  </a>
-
-  <a href={LINKS.whatsapp.url} class="secondary">
-    Resolver una duda
-  </a>
-</div>
+        <a href={LINKS.calendly.general} class="primary">Solicitar revisión inicial</a>
+        <a href={LINKS.whatsapp.url} class="secondary">Resolver una duda</a>
+      </div>
     </div>
   </div>
 </section>
 
 <style>
-  .diagnostic-cta {
-    padding: 120px 0;
-    background: #ffffff;
-  }
-
-  .cta-box {
-    position: relative;
-    overflow: hidden;
-    border-radius: 34px;
-    background: linear-gradient(135deg, #2563eb, #06b6d4);
-    padding: 72px 24px;
-    text-align: center;
-    color: white;
-    box-shadow: 0 30px 80px rgba(37, 99, 235, .22);
-  }
-
-  .bg {
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(circle at 20% 20%, rgba(255,255,255,.22), transparent 28%),
-      radial-gradient(circle at 85% 80%, rgba(255,255,255,.18), transparent 26%),
-      linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
-    background-size: auto, auto, 46px 46px, 46px 46px;
-  }
-
-  .cta-box > *:not(.bg) {
-    position: relative;
-    z-index: 1;
-  }
-
-  .badge {
-    display: inline-flex;
-    border: 1px solid rgba(255,255,255,.35);
-    border-radius: 999px;
-    background: rgba(255,255,255,.14);
-    padding: 10px 14px;
-    color: white;
-    font-size: 14px;
-    font-weight: 800;
-  }
-
-  h2 {
-    max-width: 820px;
-    margin: 28px auto 0;
-    color: white;
-    font-size: clamp(2.3rem, 5vw, 4rem);
-    line-height: 1;
-    font-weight: 900;
-    letter-spacing: -.06em;
-  }
-
-  p {
-    max-width: 720px;
-    margin: 24px auto 0;
-    color: rgba(255,255,255,.86);
-    font-size: 18px;
-    line-height: 1.8;
-  }
-
-  .actions {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
-    margin-top: 38px;
-  }
-
-  .primary,
-  .secondary {
-    display: inline-flex;
-    height: 52px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 14px;
-    padding-inline: 28px;
-    font-weight: 800;
-    text-decoration: none;
-    transition: .2s ease;
-  }
-
-  .primary {
-    background: white;
-    color: #2563eb;
-  }
-
-  .secondary {
-    border: 1px solid rgba(255,255,255,.45);
-    color: white;
-  }
-
-  .primary:hover,
-  .secondary:hover {
-    transform: translateY(-2px);
-  }
-
-  @media (max-width: 720px) {
-    .diagnostic-cta {
-      padding: 90px 0;
-    }
-
-    .actions a {
-      width: 100%;
-    }
-  }
+  .diagnostic-cta { padding: 120px 0; background: #ffffff; }
+  .cta-box { position: relative; overflow: hidden; border-radius: 34px; background: linear-gradient(135deg, #2563eb, #06b6d4); padding: 72px 24px; text-align: center; color: white; box-shadow: 0 30px 80px rgba(37,99,235,.22); }
+  .bg { position: absolute; inset: 0; background: radial-gradient(circle at 20% 20%, rgba(255,255,255,.22), transparent 28%), radial-gradient(circle at 85% 80%, rgba(255,255,255,.18), transparent 26%), linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px); background-size: auto, auto, 46px 46px, 46px 46px; }
+  .cta-box > *:not(.bg) { position: relative; z-index: 1; }
+  .badge { display: inline-flex; border: 1px solid rgba(255,255,255,.35); border-radius: 999px; background: rgba(255,255,255,.14); padding: 10px 14px; color: white; font-size: 14px; font-weight: 800; }
+  h2 { max-width: 900px; margin: 28px auto 0; color: white; font-size: clamp(2.3rem, 5vw, 4rem); line-height: 1; font-weight: 900; letter-spacing: -.06em; }
+  p { max-width: 760px; margin: 24px auto 0; color: rgba(255,255,255,.88); font-size: 18px; line-height: 1.8; }
+  .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 38px; }
+  .primary, .secondary { display: inline-flex; height: 52px; align-items: center; justify-content: center; border-radius: 14px; padding-inline: 28px; font-weight: 800; text-decoration: none; transition: .2s ease; }
+  .primary { background: white; color: #2563eb; }
+  .secondary { border: 1px solid rgba(255,255,255,.45); color: white; }
+  .primary:hover, .secondary:hover { transform: translateY(-2px); }
+  @media (max-width: 720px) { .diagnostic-cta { padding: 90px 0; } .actions a { width: 100%; } }
 </style>

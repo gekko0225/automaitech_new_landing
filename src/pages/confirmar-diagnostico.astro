@@ -4,7 +4,6 @@ import Header from '../components/common/Header.astro';
 import Footer from '../components/common/Footer.astro';
 
 import { LINKS } from '../config/links';
-import { PRICING } from '../config/pricing';
 ---
 
 <BaseLayout
@@ -21,8 +20,8 @@ import { PRICING } from '../config/pricing';
         <h1>¡Tu sesión ya está agendada!</h1>
 
         <p>
-          Ahora solo faltan dos pasos para comenzar el análisis de tu negocio y
-          preparar tu Informe Operativo Inteligente antes de la reunión.
+          Ahora completa el cuestionario para que podamos revisar tu proceso y
+          llegar a la reunión con un análisis inicial preparado.
         </p>
       </div>
 
@@ -34,17 +33,17 @@ import { PRICING } from '../config/pricing';
 
         <div>
           <span>2</span>
-          <p>Pago</p>
-        </div>
-
-        <div>
-          <span>3</span>
           <p>Cuestionario</p>
         </div>
 
         <div>
+          <span>3</span>
+          <p>Revisión</p>
+        </div>
+
+        <div>
           <span>4</span>
-          <p>Diagnóstico</p>
+          <p>Sesión</p>
         </div>
       </div>
 
@@ -52,34 +51,32 @@ import { PRICING } from '../config/pricing';
         <article class="step featured">
           <span class="number">01</span>
 
-          <h2>Confirma tu diagnóstico</h2>
+          <h2>Completa el cuestionario</h2>
 
           <p>
-            Para iniciar el trabajo necesitamos confirmar el servicio mediante
-            el pago del diagnóstico. Este valor se descuenta completamente si
-            implementas uno de nuestros sistemas.
+            Dedica aproximadamente 15 minutos a responder unas preguntas sobre
+            cómo atraes, filtras y das seguimiento a tus prospectos.
           </p>
 
-          <a href={LINKS.payment.diagnostic} class="btn-primary">
-            Confirmar mi diagnóstico
+          <a href={LINKS.forms.diagnostic} class="btn-primary">
+            Completar cuestionario
           </a>
 
-          <small>Pago seguro mediante Mercado Pago · {PRICING.diagnostic.display}</small>
+          <small>Esta revisión inicial no tiene costo.</small>
         </article>
 
         <article class="step">
           <span class="number">02</span>
 
-          <h2>Completa el cuestionario</h2>
+          <h2>Revisamos tu proceso</h2>
 
           <p>
-            Después del pago, dedica aproximadamente 15 minutos a responder el
-            cuestionario. Esta información nos permitirá preparar un análisis
-            personalizado antes de nuestra reunión.
+            Con tus respuestas identificamos el principal cuello de botella y
+            preparamos los puntos que revisaremos contigo durante la sesión.
           </p>
 
-          <a href={LINKS.forms.diagnostic} class="btn-secondary">
-            Completar cuestionario
+          <a href={LINKS.whatsapp.url} class="btn-secondary">
+            Resolver una duda
           </a>
         </article>
       </div>
@@ -91,8 +88,8 @@ import { PRICING } from '../config/pricing';
         </div>
 
         <div class="after-list">
-          <p>✓ Confirmamos tu pago.</p>
-          <p>✓ Revisamos tus respuestas.</p>
+          <p>✓ Revisamos tu cuestionario.</p>
+          <p>✓ Analizamos tus respuestas.</p>
           <p>✓ Analizamos tu operación.</p>
           <p>✓ Preparamos tu Informe Operativo Inteligente.</p>
           <p>✓ Revisamos contigo los resultados y próximos pasos.</p>

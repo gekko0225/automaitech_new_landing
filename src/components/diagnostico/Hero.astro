@@ -1,5 +1,5 @@
 ---
-import { PRICING } from '../../config/pricing';
+import { LINKS } from '../../config/links';
 ---
 
 <section class="diagnostic-hero">
@@ -18,7 +18,7 @@ import { PRICING } from '../../config/pricing';
       </p>
 
       <div class="actions">
-        <a href="#precio" class="btn-primary">
+        <a href={LINKS.calendly.diagnostic} class="btn-primary">
           Solicitar diagnóstico
         </a>
 
@@ -28,8 +28,8 @@ import { PRICING } from '../../config/pricing';
       </div>
 
       <div class="price-note">
-        <strong>{PRICING.diagnostic.display}</strong>
-        <span>Se descuenta si implementas uno de nuestros sistemas.</span>
+        <strong>Revisión inicial sin costo</strong>
+        <span>Identificamos el principal cuello de botella antes de recomendar una solución.</span>
       </div>
     </div>
 
